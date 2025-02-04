@@ -3,16 +3,19 @@ import { EmblaOptionsType } from 'embla-carousel'
 import { NextPage } from 'next'
 import Carousel from './components/Carousel'
 import Footer from './components/Footer'
+import options from "./json/options.json";
+import { Slide } from './interface';
 
-const OPTIONS: EmblaOptionsType = { dragFree: true }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+const CAROUSELCONFIG: EmblaOptionsType = { dragFree: true, loop: true };
+const OPTIONS = options as Slide[];
 
 const Home: NextPage = () => {
 
   return (
     <>
-      <Carousel slides={SLIDES} options={OPTIONS} />
+      <Carousel
+        config={CAROUSELCONFIG}
+        options={OPTIONS} />
       <Footer />
     </>
   )

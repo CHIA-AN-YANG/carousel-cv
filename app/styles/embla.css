@@ -1,8 +1,7 @@
 .embla {
   width: 100vw;
-  ;
-  margin: auto;
-  --slide-height: calc(100vh - 6.4rem);
+  margin-top: 3.2rem;
+  --slide-height: calc(100vh - 8rem);
   --slide-spacing: 0.4rem;
   --slide-size: 90%;
 }
@@ -29,6 +28,7 @@
   font-size: 4rem;
   font-weight: 600;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: var(--slide-height);
@@ -37,25 +37,27 @@
 }
 
 .embla__controls {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
-  gap: 1.2rem;
-  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
 }
 
 .embla__dots {
   display: flex;
   flex-wrap: nowrap;
   width: 80vw;
-  margin: 1rem 10vw;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 1.2rem;
+  margin-block: 0.5rem;
+  margin-inline-start: 2.4rem;
+}
 
-
+.embla__dots button {
+  transition: all 0.3s;
 }
 
 .embla__dot {
+  position: relative;
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
   appearance: none;
@@ -65,26 +67,44 @@
   text-decoration: none;
   cursor: pointer;
   border: 0;
-  padding: 0;
-  margin: 0;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 1.8rem;
+  overflow: hidden;
+  min-width: 1.8rem;
+  padding-inline: 0.4rem;
+  margin-block-start: 0.4rem;
+  height: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 0;
+}
+
+.button__text {
+  display: none;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.embla__dot--selected {
+  width: 100px;
+  background-color: var(--detail-medium-contrast);
 }
 
 .embla__dot:after {
+  position: absolute;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 1.4rem;
-  height: 1.4rem;
-  border-radius: 50%;
+  width: 100%;
+  height: 1.8rem;
   display: flex;
   align-items: center;
   content: '';
 }
 
-.embla__dot--selected:after {
+/* .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
+} */
+
+.embla__dot--selected .button__text {
+  display: inline-block;
+  text-wrap: nowrap;
 }
