@@ -1,0 +1,22 @@
+[
+  {
+    "name": "FalconPack",
+    "summaryTags": ["frontend lead", "UI/UX support", "develop"],
+    "description": "A B2C e-commerce platform for a client in the packaging industry. Independent development team from Taiwan and client in the Middle East."
+  },
+  {
+    "name": "Wow concept",
+    "summaryTags": ["frontend dev", "develop"],
+    "description": "A visually rich e-commerce platform for a client in the fashion industry. The website is built with a focus on user experience and SEO."
+  },
+  {
+    "name": "Pinterview",
+    "summaryTags": ["frontend lead", "develop"],
+    "description": "An interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications."
+  },
+  {
+    "name": "Ohgar",
+    "summaryTags": ["support", "maintenance"],
+    "description": "A living goods e-commerce platform."
+  }
+]

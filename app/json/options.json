@@ -5,39 +5,49 @@
     "color": "oklch(83.82% 0.0847 7.04)",
     "buttonText": "introduction",
     "title": "Welcome to the Jungle",
-    "description": "This is the first slide of the carousel. It's a jungle out there, so be careful.",
-    "slidePage": 1
+    "content":{
+      "description": "This is the first slide of the carousel. It's a jungle out there, so be careful.",
+      "slideKey": "intro"
+    }
   },
   {
     "id": 2,
     "color": "oklch(83.82% 0.0847 209.84)",
-    "buttonText": "chapter 1",
-    "title": "The First Chapter",
-    "description": "This is the second slide of the carousel. It's the first chapter of the book.",
-    "slidePage": 2
+    "buttonText": "projects",
+    "title": "Projects",
+    "content": {
+      "description": "This is the second slide of the carousel. It's the first chapter of the book.",
+      "slideKey": "projects"
+    }
   },
   {
     "id": 3,
     "color": "oklch(83.82% 0.0847 161.12)",
-    "buttonText": "chapter 2",
+    "buttonText": "wow",
     "title": "The Second Chapter",
-    "description": "This is the third slide of the carousel. It's the second chapter of the book.",
-    "slidePage": 3
+    "content": {
+      "description": "This is the third slide of the carousel. It's the second chapter of the book.",
+      "slideKey": "wowProject"
+    }
   },
   {
     "id": 4,
     "color": "oklch(83.82% 0.0847 161.12)",
-    "buttonText": "chapter 3",
+    "buttonText": "ohgar",
     "title": "The Third Chapter",
-    "description": "This is the fourth slide of the carousel. It's the third chapter of the book.",
-    "slidePage": 4
+    "content": {
+      "description": "This is the third slide of the carousel. It's the second chapter of the book.",
+      "slideKey": "ohgarProject"
+    }
   },
   {
     "id": 5,
     "color": "oklch(75.7% 0.0662 288)",
-    "buttonText": "chapter 4",
-    "title": "The Fourth Chapter",
-    "description": "This is the fifth slide of the carousel. It's the fourth chapter of the book.",
-    "slidePage": 5
+    "buttonText": "talks",
+    "title": "Talks",
+    "content": {
+      "description": "This is the third slide of the carousel. It's the second chapter of the book.",
+      "slideKey": "talks"
+    }
   }
 ]

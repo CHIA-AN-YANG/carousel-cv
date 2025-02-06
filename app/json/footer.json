@@ -1,37 +1,20 @@
 [
   { "id":1,
-    "order":1,
+    "url":"https://www.npmjs.com/package/embla-carousel",
+    "iconPath":"/linkedin.svg",
+    "iconAlt":"linkedIn",
+    "linkname":"my profile"
+  },
+  { "id":2,
+    "url":"https://www.npmjs.com/package/embla-carousel",
+    "iconPath":"/medium.svg",
+    "iconAlt":"medium",
+    "linkname":"my articles"
+  },
+  { "id":3,
     "url":"https://github.com/davidjerleke/embla-carousel",
     "iconPath":"/github.svg",
     "iconAlt":"GitHub",
     "linkname":"Visit on GitHub"
-  },
-  { "id":2,
-    "order":2,
-    "url":"https://www.npmjs.com/package/embla-carousel",
-    "iconPath":"/linkedin.svg",
-    "iconAlt":"linkedIn",
-    "linkname":"View my LinkedIn"
-  },
-  { "id":3,
-    "order":3,
-    "url":"https://www.npmjs.com/package/embla-carousel",
-    "iconPath":"/medium.svg",
-    "iconAlt":"medium",
-    "linkname":"Read my Medium"
-  },
-  { "id":4,
-    "order":4,
-    "url":"https://www.npmjs.com/package/embla-carousel",
-    "iconPath":"/twitter.svg",
-    "iconAlt":"Twitter",
-    "linkname":"Follow on Twitter"
-  },
-  { "id":5,
-    "order":5,
-    "url":"https://www.npmjs.com/package/embla-carousel",
-    "iconPath":"/facebook.svg",
-    "iconAlt":"Facebook",
-    "linkname":"Like on Facebook"
   }
 ]

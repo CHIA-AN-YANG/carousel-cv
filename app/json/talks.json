@@ -1,0 +1,47 @@
+[
+  { 
+    "id":1,
+    "title":"MWC 2023",
+    "description":"MWC Taiwan 2023 is hosted by Taiwan's largest technical blog. I spoke about Headless CMS system application in frontend.",
+    "media":{
+      "url": "https://picsum.photos/600/350?v=1",
+      "alt": "talk 1"
+    }
+  },
+  { 
+    "id":2,
+    "title":"React Summit",
+    "description":"React Summit 2023 is hosted by the React community. I spoke about the future of React and how it will change the way we build web applications.",
+    "media":{
+      "url": "https://picsum.photos/600/350?v=2",
+      "alt": "talk 2"
+    }
+  },
+  { 
+    "id":3,
+    "title":"Vue.js Conference",
+    "description":"Vue.js Conference 2023 is hosted by the Vue.js community. I spoke about the new features in Vue.js 4 and how it will make developers' lives easier.",
+    "media":{
+      "url": "https://picsum.photos/600/350?v=3",
+      "alt": "talk 3"
+    }
+  },
+  { 
+    "id":4,
+    "title":"Angular Connect",
+    "description":"Angular Connect 2023 is hosted by the Angular community. I spoke about the new features in Angular 13 and how it will make developers' lives easier.",
+    "media":{
+      "url": "https://picsum.photos/600/350?v=4",
+      "alt": "talk 4"
+    }
+  },
+  { 
+    "id":5,
+    "title":"Node.js Summit",
+    "description":"Node.js Summit 2023 is hosted by the Node.js community. I spoke about the new features in Node.js 18 and how it will make developers' lives easier.",
+    "media":{
+      "url": "https://picsum.photos/600/350?v=5",
+      "alt": "talk 5"
+    }
+  }
+]

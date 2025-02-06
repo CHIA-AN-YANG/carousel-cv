@@ -8,5 +8,5 @@ export interface Slide {
 
 export interface Content {
   description?: string
-  page?: string
+  slideKey?: string
 }

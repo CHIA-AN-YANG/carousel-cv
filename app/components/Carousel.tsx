@@ -5,6 +5,7 @@ import { useDotButton, DotButton } from './DotBotton'
 import { Slide } from '../interface'
 import { slideMapper } from '../util/slide-mapper'
 import { Suspense, useRef } from 'react'
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 type PropType = {
   config?: EmblaOptionsType,
@@ -13,8 +14,9 @@ type PropType = {
 
 const Carousel: React.FC<PropType> = (props) => {
   const { config, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(config);
-  const containerRef = useRef(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel(config, [WheelGesturesPlugin({
+    forceWheelAxis: 'x'
+  })]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -40,13 +42,13 @@ const Carousel: React.FC<PropType> = (props) => {
       </header>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {options.map(({ id, color, title }) => (
-            <section className="embla__slide" key={id}>
-              <div className="embla__slide__number" style={{ background: color + 'url("/bg.svg")' }}>
-                {title ? <h2>{title}</h2> : ''}
+          {options.map((slide) => (
+            <section className="embla__slide" key={slide.id} id={slide.content?.slideKey ?? ""}>
+              <div className="embla__slide__number" style={{ background: slide.color + 'url("/bg.svg")' }}>
                 <Suspense fallback={<p>Loading...</p>}>
-                  {slideMapper('intro')({})}
+                  {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}
                 </Suspense>
+                <div className="content__mask"></div>
               </div>
             </section>
           ))}

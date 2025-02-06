@@ -1,0 +1,137 @@
+#talks {
+  position: relative;
+}
+
+#talks .embla__slide__number {
+  padding: 0;
+}
+
+.talks--container {
+  width: 100%;
+}
+
+.talks--container .content__description {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: -3.6rem;
+  margin: 0;
+}
+
+.talks--container .content__description p {
+  margin: 0;
+  position: absolute;
+  bottom: 1.8rem;
+  width: 50%;
+  left: 4rem;
+  color: white;
+  padding: 2.4rem;
+  backdrop-filter: blur(1rem);
+}
+
+.talks--container .content__title {
+  background: transparent;
+  position: absolute;
+  top: 48px;
+  left: 4rem;
+  -webkit-text-stroke: 1px white;
+  z-index: 150;
+}
+
+.talks--slide .embla {
+  max-width: 120%;
+  margin: 0;
+  --slide-height: 100%;
+  --slide-spacing: 1rem;
+  --slide-size: 120%;
+}
+
+.talks--slide__viewport {
+  overflow: hidden;
+}
+
+.talks--slide__container {
+  display: flex;
+  width: min(100vw, 880px);
+  height: 100%;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.talks--slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+}
+
+.talks--slide__img {
+  border-radius: 0;
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+
+.talks--slide__number {
+  padding: 0;
+}
+
+.talks--slide__controls {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 148px;
+  left: 8rem;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+}
+
+.talks--slide__dots {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: unset;
+  align-items: flex-start;
+}
+
+.talks--slide__dot {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: unset;
+  align-items: center;
+  gap: 0.8rem;
+  padding-inline: 0.8rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: white;
+  background-color: salmon;
+}
+
+
+.talks--slide__dot:before {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+
+.talks--slide__dot--selected:before {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+
+.talks--slide__slide__img {
+  user-select: none;
+}

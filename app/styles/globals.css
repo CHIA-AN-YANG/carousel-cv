@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import "./base.css";
 @import "./embla.css";
+@import "./talks-slide.css";
 
 
 /* :root {
