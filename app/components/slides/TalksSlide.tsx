@@ -18,8 +18,7 @@ interface Talk {
 
 
 function TalksSlide() {
-  const options: EmblaOptionsType = { loop: true, duration: 30 }
-  const slides = Array.from([0, 1, 2, 3, 4, 5])
+  const options: EmblaOptionsType = { dragFree: true, loop: true, duration: 100 }
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
 
@@ -37,7 +36,7 @@ function TalksSlide() {
                 <p>{talk.description}</p>
                 <img
                   className="talks--slide__img"
-                  src={talk.media.url}
+                  src={"/images/talks/" + talk.media.url}
                   alt={talk.media.alt}
                 />
               </div>
@@ -61,7 +60,6 @@ function TalksSlide() {
               </DotButton>
             ))}
           </div>
-
         </div>
       </div>
     </div>

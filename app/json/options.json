@@ -2,7 +2,7 @@
 [
   {
     "id": 1,
-    "color": "oklch(83.82% 0.0847 7.04)",
+    "color": "oklch(83.82% 0.0847 7.04/0.44)",
     "buttonText": "introduction",
     "title": "Welcome to the Jungle",
     "content":{
@@ -11,8 +11,18 @@
     }
   },
   {
+    "id": 5,
+    "color": "oklch(75.7% 0.0662 288/0.44)",
+    "buttonText": "talks",
+    "title": "Talks",
+    "content": {
+      "description": "This is the third slide of the carousel. It's the second chapter of the book.",
+      "slideKey": "talks"
+    }
+  },
+  {
     "id": 2,
-    "color": "oklch(83.82% 0.0847 209.84)",
+    "color": "oklch(83.82% 0.0847 209.84/0.44)",
     "buttonText": "projects",
     "title": "Projects",
     "content": {
@@ -22,12 +32,12 @@
   },
   {
     "id": 3,
-    "color": "oklch(83.82% 0.0847 161.12)",
-    "buttonText": "wow",
-    "title": "The Second Chapter",
+    "color": "oklch(83.82% 0.0847 161.12/0.44)",
+    "buttonText": "skills",
+    "title": "Skill Tree",
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
-      "slideKey": "wowProject"
+      "slideKey": "skills"
     }
   },
   {
@@ -38,16 +48,6 @@
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
       "slideKey": "ohgarProject"
-    }
-  },
-  {
-    "id": 5,
-    "color": "oklch(75.7% 0.0662 288)",
-    "buttonText": "talks",
-    "title": "Talks",
-    "content": {
-      "description": "This is the third slide of the carousel. It's the second chapter of the book.",
-      "slideKey": "talks"
     }
   }
 ]

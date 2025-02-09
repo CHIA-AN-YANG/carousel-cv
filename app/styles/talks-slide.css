@@ -10,11 +10,30 @@
   width: 100%;
 }
 
+.talks--container .embla {
+  --slide-height: calc(100vh - 10.4rem);
+  --slide-spacing: 0;
+  --slide-size: min(89.85%, 796px);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.embla__slide__number::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.embla__slide__number {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .talks--container .content__description {
   padding: 0;
   position: absolute;
-  top: 0;
-  left: -3.6rem;
+  top: 2px;
+  left: -4.2rem;
   margin: 0;
 }
 
@@ -23,10 +42,11 @@
   position: absolute;
   bottom: 1.8rem;
   width: 50%;
-  left: 4rem;
-  color: white;
-  padding: 2.4rem;
+  left: 0;
+  color: var(--detail-low-contrast);
+  padding: 1.8rem 1.8rem 1.8rem 4rem;
   backdrop-filter: blur(1rem);
+  z-index: 10;
 }
 
 .talks--container .content__title {
@@ -36,14 +56,6 @@
   left: 4rem;
   -webkit-text-stroke: 1px white;
   z-index: 150;
-}
-
-.talks--slide .embla {
-  max-width: 120%;
-  margin: 0;
-  --slide-height: 100%;
-  --slide-spacing: 1rem;
-  --slide-size: 120%;
 }
 
 .talks--slide__viewport {
@@ -71,6 +83,7 @@
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
+  filter: brightness(0.8);
 }
 
 .talks--slide__number {
@@ -113,8 +126,19 @@
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 600;
-  color: white;
-  background-color: salmon;
+  color: var(--detail-high-contrast);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.talks--slide__dots:hover .talks--slide__dot {
+  color: var(--detail-low-contrast);
+  background-color: #ba83ca;
+}
+
+.talks--slide__dots .talks--slide__dot.talks--slide__dot--selected {
+  color: var(--text-body);
+  background-color: #f9f871;
 }
 
 

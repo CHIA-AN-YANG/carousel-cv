@@ -2,46 +2,37 @@
   { 
     "id":1,
     "title":"MWC 2023",
-    "description":"MWC Taiwan 2023 is hosted by Taiwan's largest technical blog. I spoke about Headless CMS system application in frontend.",
+    "description":"MWC Taiwan 2023 is hosted by Taiwan's largest technical blog. I spoke about Headless CMS system application in frontend in the event.",
     "media":{
-      "url": "https://picsum.photos/600/350?v=1",
-      "alt": "talk 1"
+      "url": "talks-mwc.webp",
+      "alt": "Photo of me spoken onstage"
     }
   },
   { 
     "id":2,
-    "title":"React Summit",
-    "description":"React Summit 2023 is hosted by the React community. I spoke about the future of React and how it will change the way we build web applications.",
+    "title":"GDG DevFest 2024",
+    "description":"Google developer group DevFest 2024 is hosted by the Kaohsiung GDG community. I spoke about how to adopt to the fast-moving AI trend, and the foundamentals of frontend performance.",
     "media":{
-      "url": "https://picsum.photos/600/350?v=2",
-      "alt": "talk 2"
+      "url": "talks-GDG.webp",
+      "alt": "Photo with the host"
     }
   },
   { 
     "id":3,
-    "title":"Vue.js Conference",
-    "description":"Vue.js Conference 2023 is hosted by the Vue.js community. I spoke about the new features in Vue.js 4 and how it will make developers' lives easier.",
+    "title":"Seidor GO",
+    "description":"This educational event is hosted by Seidor. I introduced SPA and SAP's Spartacus frontend framework to the backend developers.",
     "media":{
-      "url": "https://picsum.photos/600/350?v=3",
-      "alt": "talk 3"
+      "url": "talks-valencia.webp",
+      "alt": "Valencia's building"
     }
   },
   { 
     "id":4,
-    "title":"Angular Connect",
-    "description":"Angular Connect 2023 is hosted by the Angular community. I spoke about the new features in Angular 13 and how it will make developers' lives easier.",
+    "title":"Community Sharing",
+    "description":"I actively share what I know in learning community like Alpha Camp or Company workshops.",
     "media":{
-      "url": "https://picsum.photos/600/350?v=4",
-      "alt": "talk 4"
-    }
-  },
-  { 
-    "id":5,
-    "title":"Node.js Summit",
-    "description":"Node.js Summit 2023 is hosted by the Node.js community. I spoke about the new features in Node.js 18 and how it will make developers' lives easier.",
-    "media":{
-      "url": "https://picsum.photos/600/350?v=5",
-      "alt": "talk 5"
+      "url": "talks-ac.webp",
+      "alt": "An ac event for women's day"
     }
   }
 ]

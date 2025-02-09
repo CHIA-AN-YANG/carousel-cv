@@ -1,18 +1,18 @@
 [
   { "id":1,
-    "url":"https://www.npmjs.com/package/embla-carousel",
+    "url":"https://www.linkedin.com/in/chia-an-yang-576199149/",
     "iconPath":"/linkedin.svg",
     "iconAlt":"linkedIn",
     "linkname":"my profile"
   },
   { "id":2,
-    "url":"https://www.npmjs.com/package/embla-carousel",
+    "url":"https://medium.com/@chiaan.y.creativeworker",
     "iconPath":"/medium.svg",
     "iconAlt":"medium",
     "linkname":"my articles"
   },
   { "id":3,
-    "url":"https://github.com/davidjerleke/embla-carousel",
+    "url":"https://github.com/CHIA-AN-YANG/CHIA-AN-YANG",
     "iconPath":"/github.svg",
     "iconAlt":"GitHub",
     "linkname":"Visit on GitHub"

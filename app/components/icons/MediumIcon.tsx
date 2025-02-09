@@ -1,0 +1,9 @@
+import React from 'react';
+
+const GitHubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg className={props.className} xmlns="http://www.w3.org/2000/svg" fill="currentColor" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
+    <path d="M 18.998047 15 A 17.002 17.002 0 0 0 18.998047 49.003906 A 17.002 17.002 0 0 0 18.998047 15 z M 45.498047 16 A 8.502 16.002 0 0 0 45.498047 48.003906 A 8.502 16.002 0 0 0 45.498047 16 z M 58.5 17 A 3.5 15.002 0 1 0 58.5 47.003906 A 3.5 15.002 0 1 0 58.5 17 z"></path>
+  </svg>
+);
+
+export default GitHubIcon;

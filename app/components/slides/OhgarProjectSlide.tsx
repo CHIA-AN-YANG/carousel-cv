@@ -1,9 +1,13 @@
 function OhgarProjectSlide() {
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl mb-4">ohgar project slide</h1>
-    </div>
+    <>
+      <div className="softpower--container slide">
+        <h2 className="content__title">Soft Power</h2>
+        <div className="content__description">
+        </div>
+      </div>
+    </>
   );
 }
 

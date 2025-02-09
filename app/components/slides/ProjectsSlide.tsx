@@ -6,18 +6,18 @@ interface Project {
   description: string;
 }
 
-interface ProjectDetailsProps {
-  project: Project;
-}
+// interface ProjectDetailsProps {
+//   project: Project;
+// }
 
-const ProjectsSlide: React.FC<ProjectDetailsProps> = () => {
+const ProjectsSlide: React.FC = () => {
 
   return (
     <>
       <div className="project--container slide">
         <h2 className="content__title">Projects</h2>
         <div className="content__description">
-          {projects ? projects.map(project => <details name={project.name} key={project.name}>
+          {projects ? projects.map(project => <details name={project.key} key={project.key}>
             <summary>
               <h3>{project.name}</h3>
               {project.summaryTags.map((tag, index) => (
@@ -26,7 +26,7 @@ const ProjectsSlide: React.FC<ProjectDetailsProps> = () => {
                 </span>
               ))}
             </summary>
-            <p>{project.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
           </details>) : ""}
         </div>
       </div>

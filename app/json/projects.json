@@ -1,21 +1,24 @@
 [
   {
-    "name": "FalconPack",
+    "name": "FalconPack Online",
+    "key":"falconpack",
     "summaryTags": ["frontend lead", "UI/UX support", "develop"],
-    "description": "A B2C e-commerce platform for a client in the packaging industry. Independent development team from Taiwan and client in the Middle East."
-  },
+    "description": "We built a brand new <abbr title='business-to-consumer'>B2C</abbr> site to replace the existing wordpress site. The new site has custom <abbr title='content management system'>CMS</abbr> to manage the content, and is tailered for consumers to:<ul><li>Compare products.</li><li>Memorize consumers' geolocations.</li></ul>Falcon Pack, the flagship company of the falcon group, is manufacturing disposable packaging products for the food service and consumer market.Its headquarter is in Sharjah U.A.E. Falcon pack exports thier products worldwide.\n" },
   {
     "name": "Wow concept",
+    "key":"wow",
     "summaryTags": ["frontend dev", "develop"],
     "description": "A visually rich e-commerce platform for a client in the fashion industry. The website is built with a focus on user experience and SEO."
   },
   {
     "name": "Pinterview",
+    "key":"pinterview",
     "summaryTags": ["frontend lead", "develop"],
     "description": "An interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications."
   },
   {
     "name": "Ohgar",
+    "key":"ohgar",
     "summaryTags": ["support", "maintenance"],
     "description": "A living goods e-commerce platform."
   }

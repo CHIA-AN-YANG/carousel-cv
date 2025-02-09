@@ -15,7 +15,7 @@ const Footer: React.FC = () => (
   <footer className="footer">
     {LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
       <a key={url} className="footer__link" href={url}>
-        <img className="footer__link__svg" src={"./footer" + iconPath} alt={iconAlt} />
+        <img className="footer__link__svg" src={"./images/footer" + iconPath} alt={iconAlt} />
         <span className="footer__link__text">{linkname}</span>
       </a>
     ))}

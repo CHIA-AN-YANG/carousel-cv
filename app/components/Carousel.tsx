@@ -6,6 +6,7 @@ import { Slide } from '../interface'
 import { slideMapper } from '../util/slide-mapper'
 import { Suspense, useRef } from 'react'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
+import BallIcon from './icons/Ball'
 
 type PropType = {
   config?: EmblaOptionsType,
@@ -44,7 +45,8 @@ const Carousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {options.map((slide) => (
             <section className="embla__slide" key={slide.id} id={slide.content?.slideKey ?? ""}>
-              <div className="embla__slide__number" style={{ background: slide.color + 'url("/bg.svg")' }}>
+              {slide.content?.slideKey === 'intro' ? <BallIcon className="ball floating" /> : ""}
+              <div className="embla__slide__number" style={{ background: slide.color + 'url("/images/bg.svg")' }}>
                 <Suspense fallback={<p>Loading...</p>}>
                   {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}
                 </Suspense>

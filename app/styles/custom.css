@@ -1,6 +1,6 @@
 header {
   position: absolute;
-  top: 3.2rem;
+  top: 0.8rem;
   left: 0;
   z-index: 100;
 }
@@ -12,13 +12,14 @@ header {
   width: 100vw;
   z-index: 100;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem 2rem;
+  gap: 3vw;
+  padding: 0.8rem 2rem;
 }
 
 .footer__link {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
   background-color: transparent;
   text-decoration: none;
   text-align: center;
@@ -27,27 +28,39 @@ header {
   font-size: 2.4rem;
 }
 
+.footer__link:hover {
+  filter: invert(1);
+}
+
 .footer__link__svg {
   display: block;
   height: 2.4rem;
-  margin-right: 1rem;
+  opacity: 0.8;
   fill: var(--detail-medium-contrast);
 }
 
 .footer__link__text {
   font-size: 1.8rem;
+  display: inline-block;
+  padding-bottom: 2px;
 }
 
-.skew__restore {
-  transform: skew(-9deg, 0deg) scaleX(1.5);
+.ball {
+  position: fixed;
+  border-radius: 50%;
+  top: 50px;
+  height: 1400px;
+  left: -80%;
 }
 
 /** intro slide **/
 .intro--container {
   display: grid;
   grid-template-columns: 1fr 200px;
-  grid-template-rows: 105px auto;
+  grid-template-rows: 156px auto;
   gap: 1.2rem;
+  max-height: calc(100% - 1.8rem);
+  z-index: 10;
 }
 
 .intro--content__sticker {
@@ -59,8 +72,31 @@ header {
   border-radius: 50%;
   height: 200px;
   width: 200px;
+}
+
+.image__wrapper {
+  width: 100%;
+  height: 100%;
   filter: grayscale(80%);
+  border: 1px solid #845094;
+  border-radius: 50%;
   overflow: hidden;
+  transition: filter 3s;
+}
+
+.image__wrapper.flipping {
+  filter: grayscale(0%);
+  animation: flipHorizontally 3s ease-out forwards;
+}
+
+@keyframes flipHorizontally {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(1080deg);
+  }
 }
 
 .intro--content__picture img {
@@ -69,8 +105,67 @@ header {
   object-fit: cover;
 }
 
-.intro--content__title {
-  background: #fbb3c0 url("/bg.svg");
+.intro--content__title:before {
+  content: "⁂✵▔✵ ░▒▓";
+  line-height: 1.1;
+  font-size: 18rem;
+  user-select: none;
+  pointer-events: none;
+  touch-action: none;
+  color: #845094;
+  position: absolute;
+  left: 312px;
+  top: -100px;
+  letter-spacing: 10px;
+  opacity: 0.4;
+  transform: rotate(-15deg);
+  font-weight: 200;
+  -webkit-text-stroke: 0;
+}
+
+.intro--content__title:after {
+  content: "";
+  width: 0;
+  height: 0.4rem;
+  background-color: #845094;
+  border-radius: 0.4rem 0.4rem 0 0;
+  display: block;
+  animation: widen 1.5s 1s ease-out forwards;
+}
+
+@keyframes widen {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 12rem;
+  }
+}
+
+.intro--content__description {
+  overflow-y: scroll;
+  margin-inline-end: -4rem;
+}
+
+.intro--content__description :first-child {
+  max-width: 400px;
+}
+
+.intro--content__description::-webkit-scrollbar {
+  width: 50px;
+}
+
+.intro--content__description::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* background-image: url("/images/scrollbar.svg"); */
+  background-image: url("/images/scrollbar-long.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.intro--content__description p {
+  max-width: 80%;
 }
 
 /** project slide **/
@@ -83,7 +178,7 @@ header {
 }
 
 .project--container .content__title {
-  background: #85dae8 url("/bg.svg");
+  background: #85dae8 url("/images/bg.svg");
 }
 
 .project--container .content__description {
@@ -171,6 +266,40 @@ summary span::after {
   border-block-end: 0 solid transparent;
 }
 
+#skills .embla__slide__number {
+  padding-inline-end: 0;
+}
+
+.skills--container {
+  display: grid;
+  max-width: 100%;
+  grid-template-rows: 100px auto;
+  gap: 1.2rem;
+  max-height: calc(100% - 1.8rem);
+}
+
+.skills--container .content__title {
+  position: sticky;
+  top: 0;
+}
+
+.skills--mindmap__container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.skills--mindmap__container::-webkit-scrollbar {
+  width: 50px;
+}
+
+.skills--mindmap__container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* background-image: url("/images/scrollbar.svg"); */
+  background-image: url("/images/scrollbar-long.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /** slide styles **/
 .content__sticker {
   position: sticky;
@@ -178,6 +307,11 @@ summary span::after {
   height: 1px;
   width: 1px;
   z-index: 100;
+}
+
+.content__header {
+  display: inline-flex;
+  gap: 1.8rem;
 }
 
 .content__title {
@@ -188,9 +322,6 @@ summary span::after {
   -webkit-text-stroke: 1px black;
   color: transparent;
   font-weight: 900;
-  position: sticky;
-  top: 2.4rem;
-  background: #fbb3c0 url("/bg.svg");
 }
 
 .content__description {

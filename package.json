@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/d3": "^7.4.3",
     "@types/node": "^22.8.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^19",
+    "d3": "^7.9.0",
     "embla-carousel": "^8.5.2",
     "embla-carousel-fade": "^8.5.2",
     "embla-carousel-react": "^8.5.2",

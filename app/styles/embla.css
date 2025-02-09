@@ -1,8 +1,8 @@
 .embla {
   width: 100vw;
-  margin-top: 3.2rem;
-  --slide-height: calc(100vh - 8rem);
-  --slide-spacing: 0.4rem;
+  margin-top: 5.2rem;
+  --slide-height: calc(100vh - 10rem);
+  --slide-spacing: 0.8rem;
   --slide-size: min(90%, 800px);
 }
 
@@ -69,12 +69,13 @@
   text-decoration: none;
   cursor: pointer;
   border: 0;
-  width: 1.8rem;
+  width: 2rem;
   overflow: hidden;
-  min-width: 1.8rem;
+  min-width: 2rem;
+  font-size: 1.8rem;
   padding-inline: 0.4rem;
   margin-block-start: 0.4rem;
-  height: 1.8rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +89,7 @@
 }
 
 .embla__dot--selected {
-  width: 100px;
+  width: 150px;
   background-color: var(--detail-medium-contrast);
 }
 
@@ -96,7 +97,7 @@
   position: absolute;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   width: 100%;
-  height: 1.8rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   content: '';
