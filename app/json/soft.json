@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Leadership",
+    "image": {
+      "src": "/images/softskills/leadership.webp",
+      "alt": "leadership image"
+    },
+    "description":
+      "Leadership is the ability to inspire and motivate others to achieve a common goal. It requires the ability to make decisions and take responsibility for the consequences."
+  },
+  {
+    "id": 2,
+    "title": "Aesthetic",
+    "image": {
+      "src": "/images/softskills/aesthetic.webp",
+      "alt": "aesthetic image"
+    },
+    "description":
+      "Aesthetic is the ability to appreciate and create beauty, harmony, and balance in all aspects of life."
+  },
+  {
+    "id": 3,
+    "title": "Teamwork",
+    "image": {
+      "src": "/images/softskills/teamwork.webp",
+      "alt": "teamwork image"
+    },
+    "description":
+      "Teamwork is the ability to work with others to achieve a common goal. It requires good communication, cooperation, and collaboration skills."
+  },
+  {
+    "id": 4,
+    "title": "Cross-Cultural",
+    "image": {
+      "src": "/images/softskills/cross-cultural.webp",
+      "alt": "cross-cultural image"
+    },
+    "description":
+      "Cross-Cultural is the ability to understand and appreciate different cultures and work effectively with people from diverse backgrounds."
+  },
+  {
+    "id": 5,
+    "title": "Agile",
+    "image": {
+      "src": "/images/softskills/business-mindset.webp",
+      "alt": "business mindset image"
+    },
+    "description":
+      "Agile is the ability to think strategically and make decisions that will benefit the organization. It requires an understanding of the market, competition, and financial management."
+  }
+]

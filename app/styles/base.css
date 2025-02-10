@@ -39,7 +39,7 @@ main::before {
   height: 100%;
   filter: contrast(170%);
   background:
-    linear-gradient(to right top, #d16ba58b, #ba83ca, rgba(0, 0, 0, 0)), url("/images/bg.svg"), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), url("/images/bg.svg");
+    linear-gradient(to right top, #d16ba58b, #ba83ca, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg"), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg");
 }
 
 .theme-light {

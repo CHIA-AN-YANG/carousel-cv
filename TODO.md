@@ -1,16 +1,17 @@
-### Sprint 1 (Feb8 - 14) CV1
-priority: 🔥 high, ⏹️ medium, 🥶 low
+### Sprint 1 (Feb8 - 14) CV-1
+priority: 🔥 high, ⏹️ medium, 🥶 low, ⚡ quick win
+
 each storypoint around 1 hour free time
 
 |day2||
 |--|--|
 |all storypoint|======================|
-|progress|====|
+|progress|========|
 
 ### CV-1 Essential for Production Shipping 🔥
 |number# | done | desc | storypoints |priority|
 |--|--|------|---|--|
-|1.| N| Add Soft Skill slide|4||
+|1.|✅| Add Soft Skill slide|4||
 |2.| N| RWD mobile|4||
 |3.| N| RWD tablet|4||
 |4.| N| project content|2||
@@ -23,6 +24,7 @@ each storypoint around 1 hour free time
 |--|--|------|---|--|
 |1.| N| SSR|4||
 |2.| N| remove all errors|2||
+
 
 ### CV-3 More Content ⏹️
 |number# | done | desc | storypoints |priority|
@@ -44,7 +46,10 @@ each storypoint around 1 hour free time
 |1.| N| Add content management system (with notion db?)|4|🥶|
 |2.| N| Change to SASS system|4|🔥|
 
-
+### CV-6 Performance & SEO ⏹️
+|1.| N| optimize image size|2||
+|2.| N| optimize lighthouse|4||
+|3.| N| optimize lighthouse|4|⚡|
 
 - the primary stage should keep simple (in terms of technical decision and design pattern) for better flexibility
 

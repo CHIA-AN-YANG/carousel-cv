@@ -178,7 +178,7 @@ header {
 }
 
 .project--container .content__title {
-  background: #85dae8 url("/images/bg.svg");
+  background: #85dae8 url("/images/texture/bg.svg");
 }
 
 .project--container .content__description {
@@ -278,6 +278,132 @@ summary span::after {
   max-height: calc(100% - 1.8rem);
 }
 
+.soft--container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  gap: 1.2rem;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+li {
+  position: absolute;
+  display: block;
+  width: 5vw;
+  height: 1px;
+  overflow: visible;
+  color: transparent;
+  transition: all ease-in-out 0.5s;
+}
+
+li.item-0 {
+  top: 0;
+  left: 20vw;
+  z-index: 0;
+}
+
+li.item-1 {
+  top: 4vw;
+  left: 15vw;
+  z-index: 10;
+}
+
+li.item-2 {
+  top: 8vw;
+  left: 10vw;
+  z-index: 20;
+}
+
+li.item-3 {
+  top: 12vw;
+  left: 5vw;
+  z-index: 30;
+}
+
+li.item-4 {
+  top: 16vw;
+  left: 0;
+  z-index: 40;
+}
+
+li.item-4 .wrapper {
+  mask: url("/images/texture/screentone-thick.svg") repeat center center;
+
+}
+
+li.item-4 .letter {
+  opacity: 0.9;
+}
+
+li.item-4 p {
+  height: auto;
+  margin-block-start: 50%;
+  opacity: 0.9;
+}
+
+li p {
+  display: block;
+  width: 100%;
+  height: 50%;
+  padding: 1.8rem;
+  line-height: 1;
+  text-align: left;
+  color: white;
+  background-color: #845094;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  width: min(40vw, 40vh);
+  bottom: Max(-40vw, -40vh);
+  mix-blend-mode: luminosity;
+}
+
+li .letter {
+  position: absolute;
+  display: inline-block;
+  text-wrap: nowrap;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  top: 1.8vw;
+  left: min(38vw, 38vh);
+  color: rgb(41, 35, 35);
+  opacity: 0.5;
+  z-index: 10;
+}
+
+li .wrapper {
+  content: " ";
+  display: block;
+  box-sizing: content-box;
+  border-inline-end: 2px solid rgba(0, 0, 0, 0.5);
+  height: min(40vw, 40vh);
+  aspect-ratio: 1 / 1;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  mask: url("/images/texture/screentone-light.svg") repeat center center;
+  overflow: hidden;
+}
+
+li:hover:not(.item-4) .wrapper {
+  filter: brightness(0);
+}
+
+li:hover .letter {
+  opacity: 1;
+}
+
 .skills--container .content__title {
   position: sticky;
   top: 0;
@@ -299,6 +425,7 @@ summary span::after {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 
 /** slide styles **/
 .content__sticker {

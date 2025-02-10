@@ -42,12 +42,12 @@
   },
   {
     "id": 4,
-    "color": "oklch(83.82% 0.0847 161.12)",
-    "buttonText": "ohgar",
+    "color": "rgba(255,255,255)",
+    "buttonText": "soft-power",
     "title": "The Third Chapter",
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
-      "slideKey": "ohgarProject"
+      "slideKey": "softpower"
     }
   }
 ]
