@@ -1,0 +1,420 @@
+header {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  z-index: 100;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  z-index: 100;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-inline: 1.2rem;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  color: var(--detail-medium-contrast);
+  font-size: 2.4rem;
+
+  &:hover {
+    filter: invert(1);
+  }
+
+  &__svg {
+    display: block;
+    height: 2.4rem;
+    opacity: 0.8;
+    fill: var(--detail-medium-contrast);
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+}
+
+.ball {
+  position: fixed;
+  border-radius: 50%;
+  top: 50px;
+  height: 1400px;
+  left: -80%;
+}
+
+/** intro slide **/
+.intro--container {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 156px auto;
+  gap: 1.2rem;
+  max-height: calc(100% - 1.8rem);
+  z-index: 10;
+}
+
+.intro--content {
+
+  &__sticker {
+    right: 0;
+    margin-left: calc(100% - 380px);
+  }
+
+  &__picture {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+
+    .image__wrapper {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(80%);
+      border: 1px solid #845094;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: filter 3s;
+
+      &.flipping {
+        filter: grayscale(0%);
+        animation: flipHorizontally 3s ease-out forwards;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &:before {
+      content: "⁂✵▔✵ ░▒▓";
+      line-height: 1.1;
+      font-size: 18rem;
+      user-select: none;
+      pointer-events: none;
+      touch-action: none;
+      color: #845094;
+      position: absolute;
+      left: 312px;
+      top: -100px;
+      letter-spacing: 10px;
+      opacity: 0.4;
+      transform: rotate(-15deg);
+      font-weight: 200;
+      -webkit-text-stroke: 0;
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0.4rem;
+      background-color: #845094;
+      border-radius: 0.4rem 0.4rem 0 0;
+      display: block;
+      animation: widen 1.5s 1s ease-out forwards;
+    }
+  }
+
+  &__description {
+    @extend %custom--scroll;
+    margin-inline-end: -4rem;
+
+    p {
+      max-width: 80%;
+    }
+  }
+}
+
+@keyframes flipHorizontally {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(1080deg);
+  }
+}
+
+@keyframes widen {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 12rem;
+  }
+}
+
+/** project slide **/
+.project--container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+
+  .content__title {
+    background: #85dae8 url("/images/texture/bg.svg");
+  }
+
+  .content__description {
+    font-size: 2.4rem;
+  }
+
+  details {
+    border: 1px solid black;
+    line-height: 1.2;
+    padding: 0 1.8rem;
+    margin-top: 10px;
+    border-radius: 0.8rem;
+    color: var(--text-high-contrast);
+    --project-primary: var(--brand-primary);
+
+    &[name="falconpack"] {
+      --project-primary: #045f0d;
+    }
+
+    &[name="wow"] {
+      --project-primary: #0e7800;
+    }
+
+    &[name="pinterview"] {
+      --project-primary: #ed3838;
+    }
+
+    &[name="ohgar"] {
+      --project-primary: #252525;
+    }
+
+    summary {
+      line-height: 1.65;
+      color: var(--project-primary);
+
+      h3 {
+        display: inline;
+        font-size: 2.4rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-end: 1.8rem;
+      }
+
+      em {
+        color: var(--detail-low-contrast);
+        background: var(--project-primary);
+        font-size: 2rem;
+        font-style: normal;
+        display: inline-block;
+        line-height: 2.4rem;
+      }
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: text-top;
+
+        &::before,
+        &::after {
+          content: "";
+          height: 0;
+          display: inline-block;
+          background: transparent;
+        }
+
+        &::before {
+          border-inline-end: 0 solid transparent;
+          border-inline-start: 2.4rem solid transparent;
+          border-block-start: 0 solid transparent;
+          border-block-end: 2.4rem solid var(--project-primary);
+        }
+
+        &::after {
+          border-inline-end: 2.4rem solid transparent;
+          border-inline-start: 0 solid transparent;
+          border-block-start: 2.4rem solid var(--project-primary);
+          border-block-end: 0 solid transparent;
+        }
+      }
+    }
+  }
+}
+
+#skills .embla__slide__number {
+  padding-inline-end: 0;
+}
+
+.skills--container {
+  display: grid;
+  max-width: 100%;
+  grid-template-rows: 100px auto;
+  gap: 1.2rem;
+  max-height: calc(100% - 1.8rem);
+
+  .content__title {
+    position: sticky;
+    top: 0;
+  }
+
+  .skills--mindmap__container {
+    @extend %custom--scroll;
+  }
+}
+
+.soft--container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 1.2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+
+  ul {
+    display: flex;
+    position: relative;
+    margin-block-start: 4rem;
+    padding-inline-start: 4rem;
+    list-style-type: none;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    li {
+      display: block;
+      position: absolute;
+      width: 5vw;
+      height: 1px;
+      color: transparent;
+      overflow: visible;
+      transition: all ease-in-out 0.5s;
+
+      @for $i from 0 through 3 {
+        &.item-#{$i} {
+          top: #{$i * 4}vw;
+          left: #{20 - $i * 5}vw;
+          z-index: #{$i * 10};
+        }
+      }
+
+      &.item-4 {
+        top: 16vw;
+        left: 0;
+        z-index: 40;
+
+        .wrapper {
+          mask: url("/images/texture/screentone-thick.svg") repeat center center;
+        }
+
+        .letter {
+          opacity: 0.9;
+        }
+
+        p {
+          height: auto;
+          margin-block-start: 50%;
+          opacity: 0.9;
+        }
+      }
+
+      p {
+        display: block;
+        width: 100%;
+        height: 50%;
+        padding: 1.8rem;
+        line-height: 1;
+        color: white;
+        position: absolute;
+        text-align: left;
+        background-color: #845094;
+        opacity: 0;
+        z-index: 100;
+        width: min(40vw, 40vh);
+        bottom: max(-40vw, -40vh);
+        mix-blend-mode: luminosity;
+      }
+
+      .letter {
+        display: inline-block;
+        position: absolute;
+        font-size: inherit;
+        margin-block: 0;
+        top: 1.8vw;
+        left: min(38vw, 38vh);
+        color: rgb(41, 35, 35);
+        opacity: 0.5;
+        z-index: 10;
+        text-wrap: nowrap;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+
+      .wrapper {
+        display: block;
+        content: " ";
+        height: min(40vw, 40vh);
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        box-sizing: content-box;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: contain;
+        border-inline-end: 2px solid rgb(41, 35, 35);
+        mask: url("/images/texture/screentone-light.svg") repeat center center;
+      }
+
+      &:hover {
+
+        .letter {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+/** slide styles **/
+.content {
+  &__sticker {
+    position: sticky;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    z-index: 100;
+  }
+
+  &__header {
+    display: inline-flex;
+    gap: 1.2rem;
+  }
+
+  &__title {
+    grid-column: span 2;
+    grid-row: span 1;
+    margin-block-start: 0;
+    margin-block-end: 0.8rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+
+  &__description {
+    grid-column: span 2;
+    grid-row: span 1;
+
+    p {
+      margin-block-start: 0.4rem;
+      font-size: 2rem;
+    }
+  }
+}

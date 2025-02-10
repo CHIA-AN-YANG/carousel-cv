@@ -11,7 +11,6 @@ interface Item {
 
 
 function SoftPowerSlide() {
-  // const [selected, setSelected] = useState('');
   const [items, setItems] = useState<Item[]>([]);
   const [selected, setSelected] = useState<Item | null>(null);
 
@@ -50,16 +49,16 @@ function SoftPowerSlide() {
       <div className="soft--container slide">
         <h2 className="content__title">Soft Power</h2>
         <ul className="content__description">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <li
               key={item.id}
               className={`item-${item.order}`}
               onClick={() => handleSelect(item.id)}
             >
+              <h3 className="letter">{item.title}</h3>
               <p>
                 {item.description}
               </p>
-              <span className="letter">{item.title}</span>
               <div className="wrapper p-2" style={{ backgroundImage: `url(${item.image.src})` }}>
               </div>
             </li>

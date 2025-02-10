@@ -16,5 +16,11 @@
     "iconPath":"/github.svg",
     "iconAlt":"GitHub",
     "linkname":"Visit on GitHub"
+  },
+  { "id":4,
+    "url":"mailto:chiaan.y.creativeworker@gmail.com",
+    "iconPath":"/email.svg",
+    "iconAlt":"email",
+    "linkname":"e-mail me"
   }
 ]

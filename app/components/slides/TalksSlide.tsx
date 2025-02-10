@@ -27,12 +27,12 @@ function TalksSlide() {
 
   return (
     <div className="talks--container slide">
-      <h2 className="content__title">Talks</h2>
-      <div className="embla content__description">
+      <h2 className="talks--content__title content__title">Talks</h2>
+      <div className="embla talks--content__description content__description">
         <div className="talks--slide__viewport" ref={emblaRef}>
           <div className="talks--slide__container">
             {talks.map((talk) => (
-              <div className="talks--slide" key={talk.id}>
+              <div className="talks--slide__item" key={talk.id}>
                 <p>{talk.description}</p>
                 <img
                   className="talks--slide__img"

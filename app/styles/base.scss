@@ -42,6 +42,28 @@ main::before {
     linear-gradient(to right top, #d16ba58b, #ba83ca, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg"), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg");
 }
 
+%custom--scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    background-image: url("/images/scrollbar-long.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+%inertia {
+  user-select: none;
+  pointer-events: none;
+  touch-action: none;
+}
+
 .theme-light {
   --brand-primary: rgb(47, 112, 193);
   --brand-secondary: rgb(116, 97, 195);

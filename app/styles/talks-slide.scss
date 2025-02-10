@@ -1,0 +1,166 @@
+#talks {
+  position: relative;
+
+  .embla__slide__number {
+    padding: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.talks--container {
+  width: 100%;
+
+  .embla {
+    --slide-height: calc(100vh - 10.4rem);
+    --slide-spacing: 0;
+    --slide-size: min(89.85%, 796px);
+  }
+
+  .talks--content {
+
+    &__description {
+      @extend %inertia;
+      padding: 0;
+      position: absolute;
+      top: 2px;
+      left: -4.2rem;
+      margin: 0;
+
+      p {
+        margin: 0;
+        position: absolute;
+        bottom: 1.8rem;
+        width: 50%;
+        left: 0;
+        color: var(--detail-low-contrast);
+        padding: 1.8rem 1.8rem 1.8rem 4rem;
+        backdrop-filter: blur(1rem);
+        z-index: 10;
+      }
+    }
+
+    &__title {
+      background: transparent;
+      position: absolute;
+      top: 48px;
+      left: 4rem;
+      -webkit-text-stroke: 1px white;
+      z-index: 150;
+    }
+  }
+}
+
+.talks--slide {
+
+  &__container {
+    @extend %inertia;
+    display: flex;
+    width: min(100vw, 880px);
+    height: 100%;
+    overflow: hidden;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+
+  &__viewport {
+    @extend %inertia;
+    overflow: hidden;
+  }
+
+  &__item {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    user-select: initial;
+  }
+
+  &__img {
+    border-radius: 0;
+    display: block;
+    height: var(--slide-height);
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+
+  &__number {
+    padding: 0;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 148px;
+    left: 8rem;
+    justify-content: space-between;
+    margin-top: 1.8rem;
+  }
+
+  &__dots {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: unset;
+    align-items: flex-start;
+    user-select: initial;
+    pointer-events: all;
+    touch-action: manipulation;
+
+    &:hover .talks--slide__dot {
+      color: var(--detail-low-contrast);
+      background-color: #ba83ca;
+    }
+
+    .talks--slide__dot {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      touch-action: manipulation;
+      display: inline-flex;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      width: unset;
+      align-items: center;
+      gap: 0.8rem;
+      padding-inline: 0.8rem;
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: var(--detail-high-contrast);
+      background-color: transparent;
+      transition: all 0.3s ease;
+
+      &:before {
+        content: '';
+        display: flex;
+        align-items: center;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+      }
+
+      &.talks--slide__dot--selected {
+        color: var(--text-body);
+        background-color: #f9f871;
+
+        &:before {
+          box-shadow: inset 0 0 0 0.2rem var(--text-body);
+        }
+      }
+    }
+  }
+
+  &__img {
+    user-select: none;
+    pointer-events: none;
+    touch-action: none;
+  }
+}
