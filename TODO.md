@@ -6,15 +6,15 @@ each storypoint around 1 hour free time
 |day2||
 |--|--|
 |all storypoint|======================|
-|progress|===========|
+|progress|================|
 |CV-5|====|
 
 ### CV-1 Essential for Production Shipping 🔥
 |number# | done | desc | storypoints |priority|
 |--|--|------|---|--|
 |1.|✅| Add Soft Skill slide|4||
-|2.| N| RWD mobile|4||
-|3.|3/4| RWD tablet|4||
+|2.|✅| RWD mobile|4||
+|3.|✅| RWD tablet|4||
 |4.| N| project content|2||
 |5.| N| deployment|4||
 |6.|✅| Add Skill Tree slide|4||
