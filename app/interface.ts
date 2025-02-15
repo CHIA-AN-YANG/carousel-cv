@@ -1,9 +1,9 @@
 export interface Slide {
   id: number
   color: string
-  buttonText?: string
-  content?: Content
   title?: string
+  content?: Content
+  titleMobile?: string
 }
 
 export interface Content {

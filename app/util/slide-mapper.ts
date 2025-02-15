@@ -1,8 +1,8 @@
-import IntroSlide from '../components/slides/IntroSlide';
-import ProjectsSlide from '../components/slides/ProjectsSlide';
-import TalksSlide from '../components/slides/TalksSlide';
-import SkillsSlide from '../components/slides/SkillsSlide';
-import SoftPowerSlide from '../components/slides/SoftPowerSlide';
+import IntroSlide from '@/components/slides/IntroSlide';
+import ProjectsSlide from '@/components/slides/ProjectsSlide';
+import TalksSlide from '@/components/slides/TalksSlide';
+import SkillsSlide from '@/components/slides/SkillsSlide';
+import SoftPowerSlide from '@/components/slides/SoftPowerSlide';
 
 interface SlideMap {
   [key: string]: React.FC
@@ -12,7 +12,6 @@ const map: SlideMap = {
   'talks': TalksSlide,
   'projects': ProjectsSlide,
   'skills': SkillsSlide,
-  // 'wowProject': WowProjectSlide,
   'softpower': SoftPowerSlide,
 }
 

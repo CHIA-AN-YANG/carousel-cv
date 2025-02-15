@@ -5,6 +5,27 @@ header {
   z-index: 100;
 }
 
+.header {
+  position: fixed;
+  top: 1.8rem;
+  right: 2rem;
+  display: inline-block;
+  padding-inline: 1.2rem;
+  margin: 0;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--text-body);
+  background-color: white;
+  user-select: none;
+  pointer-events: none;
+  touch-action: none;
+
+  @include media-down($screen-lg) {
+    visibility: hidden;
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -34,8 +55,9 @@ header {
   &__svg {
     display: block;
     height: 2.4rem;
-    opacity: 0.8;
+    opacity: 0.9;
     fill: var(--detail-medium-contrast);
+    filter: grayscale(0%);
   }
 
   &__text {
@@ -51,6 +73,36 @@ header {
   top: 50px;
   height: 1400px;
   left: -80%;
+}
+
+@include media-down($screen-md) {
+  header {
+    top: 0;
+  }
+
+  .footer__link {
+    &__svg {
+      height: 3.2rem;
+    }
+  }
+}
+
+@include media-down($screen-sm) {
+  .footer__link {
+    &__text {
+      display: none;
+    }
+
+    &__svg {
+      height: 3.2rem;
+      opacity: 1;
+      filter: none;
+    }
+  }
+
+  .ball {
+    display: none;
+  }
 }
 
 /** intro slide **/
@@ -135,6 +187,62 @@ header {
 
     p {
       max-width: 80%;
+    }
+  }
+}
+
+#intro .embla__slide__number {
+  @include media-down($screen-sm) {
+    overflow-y: scroll;
+  }
+}
+
+.intro--container {
+  @include media-down($screen-sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 89px auto;
+    max-height: unset;
+  }
+}
+
+.intro--content {
+
+  @include media-down($screen-sm) {
+
+    &__picture {
+      margin-inline: auto;
+      width: 33vw;
+      height: 33vw;
+
+      .image__wrapper {
+        border: none;
+      }
+    }
+
+    &__title {
+      &:before {
+        font-size: 10rem;
+        left: 40%;
+        top: -220px;
+        transform: translateX(-50%) rotate(-15deg);
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__description {
+      margin-inline-end: 0;
+      overflow-y: visible;
+
+      ::-webkit-scrollbar-thumb {
+        background-image: none;
+      }
+
+      p {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -269,7 +377,38 @@ header {
   }
 
   .skills--mindmap__container {
-    @extend %custom--scroll;
+    @extend %custom--scroll !optional;
+  }
+}
+
+@include media-down($screen-md) {
+  .skills--mindmap__container {
+    overflow-x: scroll !important;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+  }
+}
+
+@include media-down($screen-sm) {
+  .skills--container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 100%;
+
+    .content__header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .skills--mindmap__container {
+      @extend %custom--scroll !optional;
+    }
   }
 }
 
@@ -284,7 +423,7 @@ header {
   ul {
     display: flex;
     position: relative;
-    margin-block-start: 4rem;
+    margin-block-start: 0;
     padding-inline-start: 4rem;
     list-style-type: none;
     flex-direction: row-reverse;
@@ -301,14 +440,14 @@ header {
 
       @for $i from 0 through 3 {
         &.item-#{$i} {
-          top: #{$i * 4}vw;
+          top: #{$i * 6}vh;
           left: #{20 - $i * 5}vw;
           z-index: #{$i * 10};
         }
       }
 
       &.item-4 {
-        top: 16vw;
+        top: 24vh;
         left: 0;
         z-index: 40;
 
@@ -381,6 +520,78 @@ header {
       }
     }
   }
+
+  @include media-down($screen-md) {
+    ul {
+      li {
+
+        @for $i from 0 through 3 {
+          &.item-#{$i} {
+            top: #{$i * 7}vh;
+            left: #{28 - $i * 7}vw;
+            z-index: #{$i * 10};
+          }
+        }
+
+        &.item-4 {
+          top: 28vh;
+        }
+
+        p {
+          width: 60vw;
+          bottom: -60vw;
+        }
+
+        .letter {
+          left: 58vw;
+        }
+
+        .wrapper {
+          height: 60vw;
+          border-inline-end: none;
+        }
+      }
+    }
+  }
+
+  @include media-down($screen-sm) {
+    ul {
+      li {
+
+        @for $i from 0 through 3 {
+          &.item-#{$i} {
+            top: #{$i * 8}vh;
+            left: #{32 - $i * 8}vw;
+            z-index: #{$i * 10};
+          }
+        }
+
+        &.item-4 {
+          top: 32vh;
+
+          .wrapper {
+            mask: none;
+          }
+        }
+
+        p {
+          height: auto;
+          mix-blend-mode: normal;
+          padding: 1.2rem;
+          opacity: 0.9;
+          bottom: -65vw;
+        }
+
+        .letter {
+          top: -3.2rem;
+          left: 0;
+          font-size: 3.2rem;
+          writing-mode: horizontal-tb;
+          text-orientation: initial;
+        }
+      }
+    }
+  }
 }
 
 /** slide styles **/
@@ -415,6 +626,19 @@ header {
     p {
       margin-block-start: 0.4rem;
       font-size: 2rem;
+    }
+  }
+
+  @include media-down($screen-sm) {
+    &__title {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    &__sticker {
+      position: relative;
+      width: unset;
+      height: unset;
     }
   }
 }

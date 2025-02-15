@@ -39,6 +39,10 @@
   &__controls {
     display: flex;
     justify-content: center;
+
+    .nav__emphasis__active {
+      display: none;
+    }
   }
 
   &__dots {
@@ -51,7 +55,8 @@
     margin-block: 0.5rem;
     margin-inline-start: 2.4rem;
 
-    button {
+    nav {
+      -webkit-tap-highlight-color: transparent;
       transition: all 0.3s;
     }
   }
@@ -82,7 +87,7 @@
       width: 150px;
       background-color: var(--detail-medium-contrast);
 
-      .button__text {
+      .button--text__desktop {
         display: inline-block;
         text-wrap: nowrap;
       }
@@ -100,8 +105,107 @@
   }
 }
 
-.button__text {
+.button--text {
   display: none;
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.embla {
+  @include media-down($screen-md) {
+    --slide-height: calc(100vh - 10rem);
+    --slide-spacing: 0;
+    --slide-size: 100vw;
+
+    &__container {
+      touch-action: manipulation;
+      margin-left: 0;
+    }
+
+    &__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+      padding-left: 0;
+      transform: none;
+
+      &__number {
+        box-shadow: none;
+        transform: none;
+      }
+    }
+  }
+
+  @include media-down($screen-sm) {
+    --slide-height: calc(100vh - 5rem);
+    margin-top: 0;
+
+    &__controls {
+      width: 100%;
+      padding-inline: 2rem;
+
+      .nav__emphasis__active {
+        display: block;
+        color: #f9f871;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        height: 5px;
+        transition: all 0.3s;
+      }
+    }
+
+    &__dots {
+      flex-grow: 1;
+      gap: none;
+      justify-content: space-between;
+      margin-inline-start: 0;
+      margin-block: 0;
+
+      nav {
+        width: unset;
+        height: 5.2rem;
+        padding-inline: 5px;
+
+      }
+    }
+
+    .button--text__mobile {
+      display: inline;
+      text-wrap: nowrap;
+      font-size: 1.8rem;
+      line-height: 5rem;
+      text-transform: uppercase;
+      color: #6c397c;
+    }
+
+    &__dot {
+      margin-block-start: 0;
+      padding-inline: 1.2rem;
+      justify-content: flex-start;
+      border: none;
+
+      &--selected {
+        background-color: transparent;
+
+        .button--text__desktop {
+          display: none;
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__viewport {
+      touch-action: pan-y;
+    }
+
+    &__slide {
+      &__number {
+        padding-inline: 2rem;
+        padding-top: 7rem;
+      }
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import softpowers from '../../json/soft.json';
+import softpowers from '@/public/json/soft.json';
 
 interface Item {
   id: number;

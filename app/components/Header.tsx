@@ -1,6 +1,6 @@
 const Header: React.FC = () => (
   <header>
-    <h1 className="header">Embla Carousel Generator React</h1>
+    <h1 className="header">Curriculum Vitae</h1>
   </header>
 )
 

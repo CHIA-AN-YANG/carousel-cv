@@ -3,8 +3,8 @@
   {
     "id": 1,
     "color": "oklch(83.82% 0.0847 7.04/0.44)",
-    "buttonText": "introduction",
-    "title": "Welcome to the Jungle",
+    "title": "introduction",
+    "titleMobile": "bio",
     "content":{
       "description": "This is the first slide of the carousel. It's a jungle out there, so be careful.",
       "slideKey": "intro"
@@ -13,8 +13,8 @@
   {
     "id": 5,
     "color": "oklch(75.7% 0.0662 288/0.44)",
-    "buttonText": "talks",
-    "title": "Talks",
+    "title": "talks",
+    "titleMobile": "talks",
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
       "slideKey": "talks"
@@ -23,8 +23,8 @@
   {
     "id": 2,
     "color": "oklch(83.82% 0.0847 209.84/0.44)",
-    "buttonText": "projects",
-    "title": "Projects",
+    "title": "projects",
+    "titleMobile": "projects",
     "content": {
       "description": "This is the second slide of the carousel. It's the first chapter of the book.",
       "slideKey": "projects"
@@ -33,8 +33,8 @@
   {
     "id": 3,
     "color": "oklch(83.82% 0.0847 161.12/0.44)",
-    "buttonText": "skills",
-    "title": "Skill Tree",
+    "title": "skills",
+    "titleMobile": "Skills",
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
       "slideKey": "skills"
@@ -43,8 +43,8 @@
   {
     "id": 4,
     "color": "rgba(255,255,255)",
-    "buttonText": "soft-power",
-    "title": "The Third Chapter",
+    "title": "soft-power",
+    "titleMobile": "influence",
     "content": {
       "description": "This is the third slide of the carousel. It's the second chapter of the book.",
       "slideKey": "softpower"

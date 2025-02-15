@@ -1,5 +1,4 @@
-import links from "../json/footer.json";
-
+import links from "@/public/json/footer.json";
 export interface FooterLink {
   url: string
   iconPath: string

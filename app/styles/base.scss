@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 
+
+$screen-xs: 320px; // Extra Small Devices (Phones)
+$screen-sm: 576px; // Small Devices (Tablets)
+$screen-md: 768px; // Medium Devices (Tablets & Small Laptops)
+$screen-lg: 992px; // Large Devices (Laptops & Desktops)
+$screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
+
+// Media Query Mixin
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -8,10 +28,18 @@ html {
   box-sizing: border-box;
   line-height: 1.15;
   background-color: var(--background-site);
-  font-size: 62.5%;
+  font-size: 55%;
   font-family: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
+
+  @include media-up($screen-md) {
+    font-size: 57%;
+  }
+
+  @include media-up($screen-lg) {
+    font-size: 62.5%;
+  }
 }
 
 *,
@@ -30,6 +58,18 @@ body {
   height: 250px;
 }
 
+@media (min-width: $screen-md) and (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+    transform-origin: center;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: fixed;
+  }
+
+}
+
 main::before {
   content: " ";
   position: absolute;
@@ -40,6 +80,10 @@ main::before {
   filter: contrast(170%);
   background:
     linear-gradient(to right top, #d16ba58b, #ba83ca, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg"), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), url("/images/texture/bg.svg");
+
+  @include media-down($screen-sm) {
+    background: #E7E7E7;
+  }
 }
 
 %custom--scroll {
@@ -56,6 +100,12 @@ main::before {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  // @include media-down($screen-sm) {
+  //   &::-webkit-scrollbar {
+  //     width: 32px;
+  //   }
+  // }
 }
 
 %inertia {

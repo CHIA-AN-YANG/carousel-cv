@@ -28,18 +28,6 @@
       top: 2px;
       left: -4.2rem;
       margin: 0;
-
-      p {
-        margin: 0;
-        position: absolute;
-        bottom: 1.8rem;
-        width: 50%;
-        left: 0;
-        color: var(--detail-low-contrast);
-        padding: 1.8rem 1.8rem 1.8rem 4rem;
-        backdrop-filter: blur(1rem);
-        z-index: 10;
-      }
     }
 
     &__title {
@@ -75,6 +63,18 @@
     flex: 0 0 var(--slide-size);
     min-width: 0;
     user-select: initial;
+
+    p {
+      margin: 0;
+      position: absolute;
+      bottom: 1.8rem;
+      width: 50%;
+      left: 0;
+      color: var(--detail-low-contrast);
+      padding: 1.8rem 1.8rem 1.8rem 4rem;
+      backdrop-filter: blur(1rem);
+      z-index: 10;
+    }
   }
 
   &__img {
@@ -162,5 +162,109 @@
     user-select: none;
     pointer-events: none;
     touch-action: none;
+  }
+}
+
+@include media-down($screen-md) {
+  .talks--container {
+    .embla {
+      --slide-size: 100vw;
+    }
+
+    .talks--content {
+
+      &__description {
+        left: 0;
+      }
+    }
+  }
+}
+
+@include media-down($screen-sm) {
+  .talks--container {
+    .talks--content {
+      &__title {
+        display: none;
+      }
+    }
+  }
+
+  .talks--slide {
+    &__item {
+      display: flex;
+      margin-top: 5rem;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+
+      p {
+        position: static;
+        width: 100%;
+        padding: 2rem;
+        color: var(--text-body);
+      }
+
+      img {
+        width: 100vw;
+        height: 68vh;
+        //object-fit: contain;
+        object-position: left;
+
+      }
+    }
+
+    &__item:nth-of-type(1) {
+
+      img {
+        object-position: right;
+      }
+    }
+
+    &__controls {
+      top: 12vh;
+      left: 2rem;
+      width: 100vw;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: 5rem;
+      margin-top: 0;
+    }
+
+    &__dots {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:hover .talks--slide__dot {
+        background-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .talks--slide__dot.talks--slide__dot--selected {
+        background-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+
+        &:before {
+          box-shadow: inset 0 0 0 0.2rem #f9f871;
+        }
+
+        .talks--slide__dot__text {
+          display: inline-block;
+          position: absolute;
+          top: -4.8rem;
+          left: 0;
+          font-size: 3.2rem;
+          font-weight: 600;
+          padding-inline: 1.2rem;
+          -webkit-text-stroke: 1px white;
+          background-color: #6c397c;
+        }
+      }
+    }
+
+
+
+    &__dot__text {
+      display: none;
+    }
   }
 }

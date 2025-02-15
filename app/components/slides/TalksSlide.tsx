@@ -3,7 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import Fade from 'embla-carousel-fade'
 import { useDotButton, DotButton } from '../DotBotton'
-import talks from '../../json/talks.json'
+import talks from '@/public/json/talks.json'
 
 interface Talk {
   id: number;

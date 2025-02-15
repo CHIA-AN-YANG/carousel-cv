@@ -13,6 +13,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "paths": {
+      "@/components/*": ["./app/components/*"],
+      "@/styles/*": ["./app/styles/*"],
+      "@/public/*": ["./public/*"],
+    },
     "plugins": [
       {
         "name": "next"

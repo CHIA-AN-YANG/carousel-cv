@@ -1,4 +1,4 @@
-import projects from '../../json/projects.json';
+import projects from '@/public/json/projects.json';
 
 interface Project {
   name: string;
