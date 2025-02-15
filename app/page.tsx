@@ -1,12 +1,20 @@
 
 import { EmblaOptionsType } from 'embla-carousel'
-import { NextPage } from 'next'
+import { Metadata, NextPage } from 'next'
 import Carousel from './components/Carousel'
 import Footer from './components/Footer'
 import options from "@/public/json/options.json";
 import { Slide } from './interface';
 import Head from 'next/head';
 import Header from './components/Header';
+
+export const metadata: Metadata = {
+  title: 'Anna Yang ⫸ CV ⫷',
+  description: 'Anna Yang\'s Curriculum Vitae',
+  icons: [
+    { url: '/images/favicon.webp', rel: 'icon', type: 'image/webp' },
+  ],
+}
 
 const CAROUSELCONFIG: EmblaOptionsType = {
   loop: true,
@@ -22,11 +30,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Chia-An Yang</title>
-        <meta name="description" content="my cv online" />
-        <link rel="icon" href="/images/favicon.webp" />
-      </Head>
       <Header></Header>
       <Carousel
         config={CAROUSELCONFIG}
