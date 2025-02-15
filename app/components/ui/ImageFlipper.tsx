@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 interface ImageFlipperPropType {
   images: string[];
@@ -28,9 +29,11 @@ const ImageFlipper: React.FC<ImageFlipperPropType> = ({ images, className }) => 
   return (
     <div className={className + " content__picture"} onMouseEnter={handleHover}>
       <div className={`${isFlipping ? "flipping" : ""}` + " image__wrapper"} >
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`selfie ${[currentIndex]}`}
+          height={200}
+          width={200}
         />
       </div>
     </div>

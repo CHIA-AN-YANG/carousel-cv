@@ -1,14 +1,18 @@
-import projects from '@/public/json/projects.json';
+import projects from "@/public/json/projects.json";
 
-interface Project {
-  name: string;
-  summaryTags: string[];
-  description: string;
-}
-
-// interface ProjectDetailsProps {
-//   project: Project;
-// }
+const ProjectFalconPack = () => (
+  <>
+    <p>We built a brand new
+      <abbr title="business-to-consumer">B2C</abbr>
+      site to replace the existing wordpress site. The new site has custom
+      <abbr title="content management system">CMS</abbr> to manage the content, and is tailered for consumers to:</p>
+    <ul>
+      <li>Compare products.</li>
+      <li>Memorize consumers geolocations.</li>
+    </ul>
+    <p>Falcon Pack, the flagship company of the falcon group, is manufacturing disposable packaging products for the food service and consumer market.Its headquarter is in Sharjah U.A.E. Falcon pack exports thier products worldwide.</p>
+  </>
+);
 
 const ProjectsSlide: React.FC = () => {
 
@@ -26,7 +30,7 @@ const ProjectsSlide: React.FC = () => {
                 </span>
               ))}
             </summary>
-            <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+            {project.key === "falconpack" ? <ProjectFalconPack /> : <p>project.description</p>}
           </details>) : ""}
         </div>
       </div>

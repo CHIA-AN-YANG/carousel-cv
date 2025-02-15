@@ -1,4 +1,4 @@
-@import "./base.scss";
-@import "./embla.scss";
-@import "./talks-slide.scss";
-@import "./custom.scss";
+@forward "./base.scss";
+@forward "./embla.scss";
+@forward "./talks-slide.scss";
+@forward "./custom.scss";

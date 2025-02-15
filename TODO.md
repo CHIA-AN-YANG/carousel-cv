@@ -19,6 +19,9 @@ each storypoint around 1 hour free time
 |5.| N| deployment|4||
 |6.|✅| Add Skill Tree slide|4||
 
+### bugfix
+1. fix 14 eslint errors during build
+
 ---
 ### CV-2 Code Excellence 🔥
 |number# | done | desc | storypoints |priority|

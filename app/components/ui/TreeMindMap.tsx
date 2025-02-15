@@ -13,15 +13,6 @@ interface Axis {
   y: number;
 }
 
-const config = {
-  fontFace: "Tenor Sans",
-  margin: 20,
-  defaultBg: "#E7E7E7",
-  defaultColor: "#000",
-  ballColor: "#FFD700",
-};
-
-
 type TreeMindMapProps = {
   data: TreeNode;
 };
@@ -44,9 +35,14 @@ function diagonal(s: Axis, d: Axis) {
 }
 
 const TreeMindMap: React.FC<TreeMindMapProps> = ({ data }) => {
-  const svgRef = useRef<SVGSVGElement | null>(null);
-  const { margin, fontFace, defaultBg, defaultColor, ballColor } = config;
 
+  const fontFace = "Tenor Sans";
+  const margin = 20;
+  const defaultBg = "#E7E7E7";
+  //const defaultColor= "#000";
+  const ballColor = "#FFD700";
+
+  const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     if (!data) return;
@@ -62,7 +58,9 @@ const TreeMindMap: React.FC<TreeMindMapProps> = ({ data }) => {
     const tree = d3.tree<TreeNode>().size([height, width - 280]);
     const treeData = tree(root);
 
-    const links = svg.append("g")
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const link = svg.append("g")
       .selectAll("line")
       .data(treeData.links())
       .enter()
@@ -81,7 +79,6 @@ const TreeMindMap: React.FC<TreeMindMapProps> = ({ data }) => {
       .enter()
       .append("g")
       .attr("transform", d => `translate(${d.y},${d.x})`);
-    console.log({ nodes: nodes, desc: treeData.descendants() });
 
     nodes.append("circle")
       .attr("r", 6)

@@ -1,9 +1,10 @@
 "use client"
-import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import Fade from 'embla-carousel-fade'
 import { useDotButton, DotButton } from '../DotBotton'
 import talks from '@/public/json/talks.json'
+import Image from 'next/image'
+import { CustomEmblaOptions } from '../../interface'
 
 interface Talk {
   id: number;
@@ -14,11 +15,11 @@ interface Talk {
     alt: string;
   }
 }
-
+const TALKS = talks as Talk[];
 
 
 function TalksSlide() {
-  const options: EmblaOptionsType = { dragFree: true, loop: true, duration: 100 }
+  const options: CustomEmblaOptions = { dragFree: true, loop: true, duration: 100 }
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
 
@@ -31,14 +32,17 @@ function TalksSlide() {
       <div className="embla talks--content__description content__description">
         <div className="talks--slide__viewport" ref={emblaRef}>
           <div className="talks--slide__container">
-            {talks.map((talk) => (
+            {TALKS.map((talk) => (
               <div className="talks--slide__item" key={talk.id}>
                 <p>{talk.description}</p>
-                <img
-                  className="talks--slide__img"
-                  src={"/images/talks/" + talk.media.url}
-                  alt={talk.media.alt}
-                />
+                <div className='talks--slide__img'>
+                  <Image
+                    src={"/images/talks/" + talk.media.url}
+                    alt={talk.media.alt}
+                    sizes="(max-width: 768px) 100vw, (min-width: 768px) 100%"
+                    fill
+                  />
+                </div>
               </div>
             ))}
           </div>

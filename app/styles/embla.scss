@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .embla {
   width: 100vw;
   margin-top: 5.2rem;
@@ -174,7 +176,6 @@
       text-wrap: nowrap;
       font-size: 1.8rem;
       line-height: 5rem;
-      text-transform: uppercase;
       color: #6c397c;
     }
 

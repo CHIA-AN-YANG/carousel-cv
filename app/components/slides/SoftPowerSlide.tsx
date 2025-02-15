@@ -3,28 +3,24 @@ import softpowers from '@/public/json/soft.json';
 
 interface Item {
   id: number;
-  title: String;
-  image: { src: String, alt: String };
-  description: String;
+  title: string;
+  image: { src: string, alt: string };
+  description: string;
   order: number;
 }
 
+const initItems = softpowers.map((el, i) => Object.assign(el, { order: i }))
 
 function SoftPowerSlide() {
-  const [items, setItems] = useState<Item[]>([]);
+  const [items, setItems] = useState<Item[]>(initItems);
   const [selected, setSelected] = useState<Item | null>(null);
-
-  useEffect(() => {
-    const newItems = softpowers.map((el, i) => Object.assign(el, { order: i }))
-    setItems(newItems);
-  }, []);
 
   useEffect(() => {
     if (!selected) {
       return;
     };
     const selectedOrder = selected.order;
-    const newItems = items.map((el, i) => {
+    const newItems = items.map((el) => {
       if (el.order > selectedOrder) {
         const oldOrder = el.order;
         el.order = oldOrder - 1;
@@ -59,7 +55,7 @@ function SoftPowerSlide() {
               <p>
                 {item.description}
               </p>
-              <div className="wrapper p-2" style={{ backgroundImage: `url(${item.image.src})` }}>
+              <div className="wrapper" style={{ backgroundImage: `url(${item.image.src})` }}>
               </div>
             </li>
           ))}

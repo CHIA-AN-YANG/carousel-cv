@@ -1,11 +1,9 @@
 
-import { EmblaOptionsType } from 'embla-carousel'
 import { Metadata, NextPage } from 'next'
 import Carousel from './components/Carousel'
 import Footer from './components/Footer'
 import options from "@/public/json/options.json";
-import { Slide } from './interface';
-import Head from 'next/head';
+import { CustomEmblaOptions, Slide } from './interface';
 import Header from './components/Header';
 
 export const metadata: Metadata = {
@@ -16,13 +14,14 @@ export const metadata: Metadata = {
   ],
 }
 
-const CAROUSELCONFIG: EmblaOptionsType = {
+const CAROUSELCONFIG: CustomEmblaOptions = {
   loop: true,
+  name: 'main',
   breakpoints: {
-    576: {
+    '(max-width: 576px)': {
       watchDrag: false,
     },
-  }
+  },
 };
 const OPTIONS = options as Slide[];
 
