@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useDotButton, DotButton } from './DotBotton'
 import { CustomEmblaOptions, Slide } from '../interface'
 import { slideMapper } from '../util/slide-mapper'
-import { Suspense, use, useEffect, useRef, useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import BallIcon from './icons/Ball'
 
 type PropType = {
