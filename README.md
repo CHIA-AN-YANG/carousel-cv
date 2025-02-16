@@ -52,4 +52,7 @@ npx tsx index.ts # check running environment
 bun index.js # switch to bun environment
 ```
 
+### Live Demo 
+Live demo at: [carousel-cv Vercel](https://carousel-cvvercel0.vercel.app/)
+
 
