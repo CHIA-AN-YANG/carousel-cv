@@ -6,8 +6,10 @@ each storypoint around 1 hour free time
 |day2||
 |--|--|
 |all storypoint|======================|
-|progress|================|
+|progress|====================|
 |CV-5|====|
+|CV-2|==|
+|CV-6|======|
 
 ### CV-1 Essential for Production Shipping 🔥
 |number# | done | desc | storypoints |priority|
@@ -16,18 +18,20 @@ each storypoint around 1 hour free time
 |2.|✅| RWD mobile|4||
 |3.|✅| RWD tablet|4||
 |4.| N| project content|2||
-|5.| N| deployment|4||
+|5.|✅| deployment|4||
 |6.|✅| Add Skill Tree slide|4||
 
 ### bugfix
 1. fix 14 eslint errors during build
+2. fix image size. good lighthouse results
+3. fix css animation by gpu accelerated attributes
 
 ---
 ### CV-2 Code Excellence 🔥
 |number# | done | desc | storypoints |priority|
 |--|--|------|---|--|
 |1.| N| SSR|4||
-|2.| N| remove all errors|2||
+|2.|✅| remove all errors|2||
 
 
 ### CV-3 More Content ⏹️
@@ -51,9 +55,8 @@ each storypoint around 1 hour free time
 |2.|✅| Change to SASS system|4|🔥|
 
 ### CV-6 Performance & SEO ⏹️
-|1.| N| optimize image size|2||
-|2.| N| optimize lighthouse|4||
-|3.| N| optimize lighthouse|4|⚡|
+|1.|✅| optimize image size|2||
+|3.|✅| optimize lighthouse|4|⚡|
 
 - the primary stage should keep simple (in terms of technical decision and design pattern) for better flexibility
 
@@ -74,3 +77,8 @@ Mobile note
 各個頁面要有足夠一致性，讓視覺體驗更完整。於是會有重複的視覺元件排列組合
 每個Icon所佔的區塊比例要明確，區塊面積和位置都暗示了按鈕的重要性
 darkmagenta
+
+### Sprint 1 post mortem
+- Mobile view took longer than expected -> estimation inaccurate without ui
+- should leave time for Bugifx phase. After deployed, mobile view has many issues. (took around 1 holiday to finish)
+- completed two new features to make mobile view looks nicer (hamburger and navigation highlight)
