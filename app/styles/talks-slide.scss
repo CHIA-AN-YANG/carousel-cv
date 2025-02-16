@@ -211,11 +211,13 @@
       background-color: var(--primary-mobile-c);
 
       p {
-        bottom: 5rem;
+        position: relative;
         width: 100%;
         padding: 2rem;
         color: var(--blank-c);
         backdrop-filter: none;
+        overflow-y: scroll;
+        background-color: var(--primary-mobile-c);
         font-family: var(--font-tenor);
       }
 

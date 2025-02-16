@@ -5,8 +5,8 @@
   --texture-light: url("/images/texture/screentone-light.svg");
   --texture-thick: url("/images/texture/screentone-thick.svg");
 
-  @include media-retina-2x {
-    --texture-bg: url("/images/texture/bg-retina.svg");
+  @include media-down($screen-sm) {
+    --texture-bg: url("/images/texture/bg-fine.svg");
   }
 }
 

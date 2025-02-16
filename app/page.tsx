@@ -1,10 +1,9 @@
 
 import { Metadata, NextPage } from 'next'
 import Carousel from './components/Carousel'
-import Footer from './components/Footer'
 import options from "@/public/json/options.json";
 import { CustomEmblaOptions, Slide } from './interface';
-import Heading from './components/Heading';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Anna Yang ⫸ CV ⫷',
@@ -29,7 +28,6 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Heading></Heading>
       <Carousel
         config={CAROUSELCONFIG}
         options={OPTIONS} />

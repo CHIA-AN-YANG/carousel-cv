@@ -17,6 +17,12 @@
   touch-action: none;
 }
 
+.burger {
+  .wrapper {
+    display: none;
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -66,7 +72,7 @@
 }
 
 @include media-down($screen-lg) {
-  .header {
+  .heading {
     visibility: hidden;
   }
 }
@@ -87,6 +93,8 @@
       width: 60px;
       justify-content: center;
       align-items: center;
+      transition: all 0.5s ease-in-out;
+      transform: rotate(0deg);
       z-index: 100;
     }
   }
@@ -103,6 +111,10 @@
   .burger__open {
     opacity: 1;
 
+    .wrapper {
+      transform: rotate(-20deg);
+    }
+
     .footer {
       width: calc(100vw - 55px);
       opacity: 1;
@@ -113,7 +125,7 @@
 
   .footer {
     right: 50px;
-    bottom: 0.8rem;
+    bottom: 1.2rem;
     overflow: hidden;
     justify-content: space-evenly;
     transition: all 0.5s ease-in-out;
@@ -316,6 +328,7 @@
     }
 
     &__description {
+      margin-inline-start: 1rem;
       margin-inline-end: 0;
       overflow-y: visible;
 

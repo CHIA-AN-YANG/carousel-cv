@@ -6,6 +6,7 @@ import { slideMapper } from '../util/slide-mapper'
 import { Suspense, useEffect, useRef, useState } from 'react'
 import BallIcon from './icons/Ball'
 import useBreakpoint from '../util/breakpoint'
+import Heading from './Heading'
 
 type PropType = {
   config?: CustomEmblaOptions,
@@ -75,6 +76,7 @@ const Carousel: React.FC<PropType> = (props) => {
           <rect width="100%" height="100%" fill="currentColor" rx="2" />
         </svg> : ""}
       </header>
+      <Heading></Heading>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {options.map((slide) => (
