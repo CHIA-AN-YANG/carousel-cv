@@ -35,9 +35,9 @@
     &__title {
       background: transparent;
       position: absolute;
-      top: 48px;
+      top: 31px;
       left: 4rem;
-      -webkit-text-stroke: 1px white;
+      -webkit-text-stroke: 1px var(--blank-c);
       z-index: 150;
     }
   }
@@ -80,6 +80,8 @@
   }
 
   &__img {
+    @extend %inertia !optional;
+    position: relative;
     border-radius: 0;
     display: block;
     height: var(--slide-height);
@@ -113,7 +115,7 @@
 
     &:hover .talks--slide__dot {
       color: var(--detail-low-contrast);
-      background-color: #ba83ca;
+      background-color: var(--secondary-c);
     }
 
     .talks--slide__dot {
@@ -136,7 +138,7 @@
       font-weight: 600;
       color: var(--detail-high-contrast);
       background-color: transparent;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
 
       &:before {
         content: '';
@@ -150,19 +152,13 @@
 
       &.talks--slide__dot--selected {
         color: var(--text-body);
-        background-color: #f9f871;
+        background-color: var(--accent-c);
 
         &:before {
           box-shadow: inset 0 0 0 0.2rem var(--text-body);
         }
       }
     }
-  }
-
-  &__img {
-    user-select: none;
-    pointer-events: none;
-    touch-action: none;
   }
 }
 
@@ -224,7 +220,7 @@
     }
 
     &__controls {
-      top: 12vh;
+      top: 120px;
       left: 2rem;
       width: 100vw;
       flex-direction: row;
@@ -248,7 +244,7 @@
         -webkit-tap-highlight-color: transparent;
 
         &:before {
-          box-shadow: inset 0 0 0 0.2rem #f9f871;
+          box-shadow: inset 0 0 0 0.2rem var(--accent-c);
         }
 
         .talks--slide__dot__text {
@@ -259,13 +255,11 @@
           font-size: 3.2rem;
           font-weight: 600;
           padding-inline: 1.2rem;
-          -webkit-text-stroke: 1px white;
-          background-color: #6c397c;
+          -webkit-text-stroke: 1px var(--blank-c);
+          background-color: var(--primary-mobile-c);
         }
       }
     }
-
-
 
     &__dot__text {
       display: none;

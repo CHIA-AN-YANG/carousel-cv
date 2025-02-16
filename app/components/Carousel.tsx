@@ -78,7 +78,7 @@ const Carousel: React.FC<PropType> = (props) => {
           {options.map((slide) => (
             <section className="embla__slide" key={slide.id} id={slide.content?.slideKey ?? ""}>
               {slide.content?.slideKey === 'intro' ? <BallIcon className="ball floating" /> : ""}
-              <div className="embla__slide__number" style={{ background: slide.color + 'url("/images/texture/bg.svg")' }}>
+              <div className="embla__slide__number" style={{ background: slide.color + ' var(--texture-bg)' }}>
                 <Suspense fallback={<p>Loading...</p>}>
                   {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}
                 </Suspense>

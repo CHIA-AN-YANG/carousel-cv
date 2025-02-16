@@ -10,7 +10,7 @@ const treeData = {
       "name": "angular",
       "children": [{ "name": "ngrx" }, { "name": "rxjs" }, { "name": "Sass" }, { "name": "SSR " }],
       "bg": "#dd5050",
-      "color": "#E7E7E7"
+      "color": "var(--frame-c)"
     },
     {
       "name": "react",
