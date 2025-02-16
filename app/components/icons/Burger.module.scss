@@ -1,0 +1,39 @@
+.burger {
+  color: var(--primary-mobile-c);
+  height: 60px;
+  width: 60px;
+}
+
+:global(.burger__open) .burger {
+
+  .topBun {
+    transform: rotate(38deg);
+  }
+
+  .bottomBun {
+    transform: rotate(-20deg);
+  }
+}
+
+.burger:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
+}
+
+.topBun {
+  transform-origin: 60% 30%;
+  transition: transform 0.5s;
+}
+
+.bottomBun {
+  transform-origin: 50% 50%;
+  transition: transform 0.5s;
+}

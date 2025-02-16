@@ -3,7 +3,6 @@ import ProjectsSlide from '@/components/slides/ProjectsSlide';
 import TalksSlide from '@/components/slides/TalksSlide';
 import SkillsSlide from '@/components/slides/SkillsSlide';
 import SoftPowerSlide from '@/components/slides/SoftPowerSlide';
-
 interface SlideMap {
   [key: string]: React.FC
 }

@@ -55,12 +55,14 @@
   }
 }
 
-.ball {
-  position: fixed;
-  border-radius: 50%;
-  top: 50px;
-  height: 1400px;
-  left: -80%;
+@include media-up($screen-sm) {
+  .ball {
+    position: fixed;
+    border-radius: 50%;
+    top: 50px;
+    height: 1400px;
+    left: -80%;
+  }
 }
 
 @include media-down($screen-lg) {
@@ -70,10 +72,54 @@
 }
 
 @include media-down($screen-sm) {
+  .burger {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+    transition: all 0.5s ease-in-out;
+    z-index: 200;
+
+    .wrapper {
+      position: relative;
+      background-color: var(--blank-c);
+      border-radius: 50%;
+      display: flex;
+      width: 60px;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+  }
+
+  .burger__closed {
+    opacity: 0.6;
+
+    .footer {
+      width: 1px;
+      opacity: 0;
+    }
+  }
+
+  .burger__open {
+    opacity: 1;
+
+    .footer {
+      width: calc(100vw - 55px);
+      opacity: 1;
+      pointer-events: all;
+      touch-action: auto;
+    }
+  }
+
   .footer {
+    right: 50px;
+    bottom: 0.8rem;
+    overflow: hidden;
     justify-content: space-evenly;
-    background-color: var(--blank-c);
-    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+    touch-action: none;
+
 
     .footer__link {
       &__text {
@@ -81,7 +127,6 @@
       }
 
       &__svg {
-        opacity: 0.4;
         width: 32px;
         height: auto;
       }

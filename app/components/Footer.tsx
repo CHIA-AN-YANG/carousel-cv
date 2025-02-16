@@ -1,5 +1,9 @@
+
+"use client"
 import links from "@/public/json/footer.json";
 import Image from "next/image";
+import BurgerIcon from './icons/Burger';
+import { useState } from 'react';
 export interface FooterLink {
   url: string
   iconPath: string
@@ -11,20 +15,35 @@ export interface FooterLink {
 
 const LINKS = links as FooterLink[];
 
-const Footer: React.FC = () => (
-  <footer className="footer">
-    {LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
-      <a key={url} className="footer__link" href={url}>
-        <Image className="footer__link__svg"
-          src={"./images/footer" + iconPath}
-          alt={iconAlt || linkname}
-          width={24}
-          height={24}
-        />
-        <span className="footer__link__text">{linkname}</span>
-      </a>
-    ))}
-  </footer>
-)
+const Footer: React.FC = () => {
+  const [bugerOpen, setBurgerOpen] = useState(false)
+
+  const handleClick = () => {
+    setBurgerOpen(!bugerOpen)
+  }
+
+  return (
+    <div className={`burger ${bugerOpen ? "burger__open" : "burger__closed"}`} >
+      <div className="wrapper" onClick={handleClick}>
+        <BurgerIcon />
+      </div>
+      < footer className="footer" >
+        {
+          LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
+            <a key={url} className="footer__link" href={url}>
+              <Image className="footer__link__svg"
+                src={"./images/footer" + iconPath}
+                alt={iconAlt || linkname}
+                width={24}
+                height={24}
+              />
+              <span className="footer__link__text">{linkname}</span>
+            </a>
+          ))
+        }
+      </footer >
+    </div>
+  )
+}
 
 export default Footer
