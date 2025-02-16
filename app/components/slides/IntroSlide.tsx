@@ -32,6 +32,7 @@ function IntroSlide() {
             I also love to share my knowledge and experience in conference or with communities.<br />
             When I am not coding, I enjoy reading, traveling, and playing mechanical keyboards.<br />
           </p>
+          <br />
         </article>
       </div>
     </>

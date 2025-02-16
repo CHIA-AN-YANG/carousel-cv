@@ -178,7 +178,13 @@
 }
 
 @include media-down($screen-sm) {
+
   .talks--container {
+    .embla {
+      --slide-height: calc(100vh - 5rem);
+      ;
+    }
+
     .talks--content {
       &__title {
         display: none;
@@ -188,9 +194,13 @@
 
   .talks--slide {
 
+    &__container {
+      height: var(--slide-height);
+    }
+
     &__img {
       width: 100vw;
-      height: 68vh;
+      height: 68dvh;
     }
 
     &__item {
@@ -198,12 +208,15 @@
       margin-top: 5rem;
       flex-direction: column-reverse;
       justify-content: flex-end;
+      background-color: var(--primary-mobile-c);
 
       p {
-        position: static;
+        bottom: 5rem;
         width: 100%;
         padding: 2rem;
-        color: var(--text-body);
+        color: var(--blank-c);
+        backdrop-filter: none;
+        font-family: var(--font-tenor);
       }
 
       img {

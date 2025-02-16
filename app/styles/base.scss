@@ -83,7 +83,7 @@ body {
 
   @include media-down($screen-sm) {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
   }
 }
 
@@ -112,6 +112,10 @@ header {
 
   @include media-down($screen-md) {
     top: 0;
+  }
+
+  @include media-down($screen-sm) {
+    position: fixed;
   }
 }
 
