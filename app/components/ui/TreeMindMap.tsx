@@ -38,7 +38,7 @@ const TreeMindMap: React.FC<TreeMindMapProps> = ({ data }) => {
 
   const fontFace = "Tenor Sans";
   const margin = 20;
-  const defaultBg = "#E7E7E7";
+  const defaultBg = "var(--frame-c)";
   //const defaultColor= "#000";
   const ballColor = "#FFD700";
 

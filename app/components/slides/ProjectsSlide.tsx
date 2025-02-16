@@ -21,16 +21,21 @@ const ProjectsSlide: React.FC = () => {
       <div className="project--container slide">
         <h2 className="content__title">Projects</h2>
         <div className="content__description">
-          {projects ? projects.map(project => <details name={project.key} key={project.key}>
+          {projects ? projects.map(project => <details
+            name={project.key}
+            key={project.key}
+            className='project--content__details'
+            style={{ "--project-primary": project.color } as React.CSSProperties}
+          >
             <summary>
               <h3>{project.name}</h3>
               {project.summaryTags.map((tag, index) => (
-                <span key={index}>
+                <span key={index} className="content__highlight">
                   <em>{tag}</em>
                 </span>
               ))}
             </summary>
-            {project.key === "falconpack" ? <ProjectFalconPack /> : <p>project.description</p>}
+            {project.key === "falconpack" ? <ProjectFalconPack /> : <p>{project.description}</p>}
           </details>) : ""}
         </div>
       </div>

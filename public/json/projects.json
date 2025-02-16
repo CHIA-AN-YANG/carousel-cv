@@ -3,24 +3,28 @@
     "name": "FalconPack Online",
     "key": "falconpack",
     "summaryTags": ["frontend lead", "UI/UX support", "develop"],
-    "description": ""
+    "description": "",
+    "color": "#045f0d"
   },
   {
     "name": "Wow concept",
     "key": "wow",
     "summaryTags": ["frontend dev", "develop"],
-    "description": "A visually rich e-commerce platform for a client in the fashion industry. The website is built with a focus on user experience and SEO."
+    "description": "A visually rich e-commerce platform for a client in the fashion industry. The website is built with a focus on user experience and SEO.",
+    "color": "#0e7800"
   },
   {
     "name": "Pinterview",
     "key": "pinterview",
     "summaryTags": ["frontend lead", "develop"],
-    "description": "An interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications."
+    "description": "An interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications.",
+    "color": "#ed3838"
   },
   {
     "name": "Ohgar",
     "key": "ohgar",
     "summaryTags": ["support", "maintenance"],
-    "description": "A living goods e-commerce platform."
+    "description": "A living goods e-commerce platform.",
+    "color": "#252525"
   }
 ]

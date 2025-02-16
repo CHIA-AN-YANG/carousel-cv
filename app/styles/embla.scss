@@ -3,7 +3,7 @@
 .embla {
   width: 100vw;
   margin-top: 5.2rem;
-  --slide-height: calc(100vh - 10rem);
+  --slide-height: calc(100dvh - 10rem);
   --slide-spacing: 0.8rem;
   --slide-size: min(90%, 800px);
 
@@ -138,7 +138,7 @@
   }
 
   @include media-down($screen-sm) {
-    --slide-height: calc(100vh - 5rem);
+    --slide-height: 100dvh;
     margin-top: 0;
 
     &__controls {
@@ -147,7 +147,7 @@
 
       .nav__emphasis__active {
         display: block;
-        color: #f9f871;
+        color: var(--accent-c);
         position: absolute;
         top: 4.5rem;
         left: 0;
@@ -176,7 +176,7 @@
       text-wrap: nowrap;
       font-size: 1.8rem;
       line-height: 5rem;
-      color: #6c397c;
+      color: var(--primary-mobile-c);
     }
 
     &__dot {
