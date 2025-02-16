@@ -5,9 +5,6 @@ import Footer from './components/Footer'
 import options from "@/public/json/options.json";
 import { CustomEmblaOptions, Slide } from './interface';
 import Header from './components/Header';
-import { Inter, Tenor_Sans } from 'next/font/google';
-const inter = Inter({ subsets: ['latin'], weight: ['200', '600', '900'], variable: '--font-inter' });
-const tenor = Tenor_Sans({ subsets: ['latin'], weight: ['400'], variable: '--font-tenor' });
 
 export const metadata: Metadata = {
   title: 'Anna Yang ⫸ CV ⫷',

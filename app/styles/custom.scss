@@ -45,7 +45,7 @@
 
   &__svg {
     display: block;
-    opacity: 0.9;
+    opacity: 0.6;
   }
 
   &__text {
@@ -258,9 +258,10 @@
 
     &__title {
       &:before {
-        font-size: 10rem;
+        font-size: 6rem;
         left: 40%;
-        top: -220px;
+        top: -180px;
+        letter-spacing: 8px;
         transform: translateX(-50%) rotate(-15deg);
       }
 

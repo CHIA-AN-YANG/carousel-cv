@@ -55,8 +55,6 @@ html {
   box-sizing: border-box;
   line-height: 1.15;
   background-color: var(--blank-c);
-  font-family: $font-base;
-  font-optical-sizing: auto;
   font-size: 55%;
 
   @include media-up($screen-md) {
@@ -77,6 +75,8 @@ html {
 body {
   background-color: var(--blank-c);
   color: var(--text-body);
+  font-family: $font-base;
+  font-optical-sizing: auto;
   line-height: 1.65;
   font-weight: normal;
   margin: 0;

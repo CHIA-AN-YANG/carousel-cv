@@ -55,10 +55,9 @@ $screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
 // $font-l: 2.4rem;
 // $font-xl: 3.2rem;
 
-$font-base: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+$font-base: var(--font-inter), 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';
-$font-book: 'Tenor Sans', sans-serif;
+$font-book: var(--font-tenor), sans-serif;
 
 // @mixin typography($size: $font-m, $color: 'initial', $weight: 400, $family: 'initial') {
 //   font-size: $size;
