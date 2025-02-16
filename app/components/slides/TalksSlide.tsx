@@ -39,7 +39,7 @@ function TalksSlide() {
                   <Image
                     src={"/images/talks/" + talk.media.url}
                     alt={talk.media.alt}
-                    sizes="(max-width: 768px) 100vw, (min-width: 768px) 100%"
+                    sizes="(max-width:880px) 100vw, 880px"
                     fill
                   />
                 </div>

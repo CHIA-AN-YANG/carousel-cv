@@ -80,6 +80,8 @@
   }
 
   &__img {
+    @extend %inertia !optional;
+    position: relative;
     border-radius: 0;
     display: block;
     height: var(--slide-height);
@@ -157,12 +159,6 @@
         }
       }
     }
-  }
-
-  &__img {
-    user-select: none;
-    pointer-events: none;
-    touch-action: none;
   }
 }
 

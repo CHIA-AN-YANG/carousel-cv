@@ -15,10 +15,6 @@
   user-select: none;
   pointer-events: none;
   touch-action: none;
-
-  @include media-down($screen-lg) {
-    visibility: hidden;
-  }
 }
 
 .footer {
@@ -65,6 +61,12 @@
   top: 50px;
   height: 1400px;
   left: -80%;
+}
+
+@include media-down($screen-lg) {
+  .header {
+    visibility: hidden;
+  }
 }
 
 @include media-down($screen-sm) {
@@ -235,7 +237,7 @@
 .intro--container {
   @include media-down($screen-sm) {
     grid-template-columns: 1fr;
-    grid-template-rows: 89px auto;
+    grid-template-rows: 50px auto;
     max-height: unset;
   }
 }
@@ -246,8 +248,8 @@
 
     &__picture {
       margin-inline: auto;
-      width: 33vw;
-      height: 33vw;
+      width: 100px;
+      height: 100px;
 
       .image__wrapper {
         border: none;
@@ -277,6 +279,7 @@
 
       p {
         max-width: 100%;
+        font-family: $font-book;
       }
     }
   }
@@ -450,24 +453,21 @@
     li {
       display: block;
       position: absolute;
-      width: 5vw;
+      width: 1px;
       height: 1px;
       color: transparent;
       overflow: visible;
       transition: all ease-in-out 0.5s;
+      -webkit-tap-highlight-color: transparent;
 
-      @for $i from 0 through 3 {
+      @for $i from 0 through 4 {
         &.item-#{$i} {
-          top: #{$i * 6}vh;
-          left: #{20 - $i * 5}vw;
+          transform: translate(#{20 - $i * 5}vw, #{$i * 6}vh);
           z-index: #{$i * 10};
         }
       }
 
       &.item-4 {
-        top: 24vh;
-        left: 0;
-        z-index: 40;
 
         .wrapper {
           mask: var(--texture-thick) repeat center center;
@@ -543,16 +543,11 @@
     ul {
       li {
 
-        @for $i from 0 through 3 {
+        @for $i from 0 through 4 {
           &.item-#{$i} {
-            top: #{$i * 7}vh;
-            left: #{28 - $i * 7}vw;
+            transform: translate(#{28 - $i * 7}vw, #{$i * 7}vh);
             z-index: #{$i * 10};
           }
-        }
-
-        &.item-4 {
-          top: 28vh;
         }
 
         p {
@@ -574,18 +569,18 @@
 
   @include media-down($screen-sm) {
     ul {
+      padding-inline-start: 0;
+
       li {
 
-        @for $i from 0 through 3 {
+        @for $i from 0 through 4 {
           &.item-#{$i} {
-            top: #{$i * 8}vh;
-            left: #{32 - $i * 8}vw;
+            transform: translate(#{32 - $i * 8}vw, #{$i * 8}vh);
             z-index: #{$i * 10};
           }
         }
 
         &.item-4 {
-          top: 32vh;
 
           .wrapper {
             mask: none;
@@ -604,6 +599,7 @@
           top: -3.2rem;
           left: 0;
           font-size: 3.2rem;
+          line-height: 1.2;
           writing-mode: horizontal-tb;
           text-orientation: initial;
         }

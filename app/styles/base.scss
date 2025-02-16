@@ -1,10 +1,13 @@
 @use "variables" as *;
-// @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200..900;1,14..32,200..900&family=Tenor+Sans&display=swap');
 
 :root {
   --texture-bg: url("/images/texture/bg.svg");
   --texture-light: url("/images/texture/screentone-light.svg");
   --texture-thick: url("/images/texture/screentone-thick.svg");
+
+  @include media-retina-2x {
+    --texture-bg: url("/images/texture/bg-retina.svg");
+  }
 }
 
 .theme-light {
@@ -52,9 +55,7 @@ html {
   box-sizing: border-box;
   line-height: 1.15;
   background-color: var(--blank-c);
-  font-family: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family: $font-base;
   font-optical-sizing: auto;
   font-size: 55%;
 
@@ -79,6 +80,11 @@ body {
   line-height: 1.65;
   font-weight: normal;
   margin: 0;
+
+  @include media-down($screen-sm) {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 main::before {
@@ -109,6 +115,7 @@ header {
   }
 }
 
+h1,
 h3 {
   font-weight: 600;
 }

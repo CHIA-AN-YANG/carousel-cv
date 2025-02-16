@@ -17,6 +17,14 @@ $screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
   }
 }
 
+@mixin media-retina-2x {
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
 
 /* custom scroll status */
 %custom--scroll {
@@ -47,10 +55,10 @@ $screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
 // $font-l: 2.4rem;
 // $font-xl: 3.2rem;
 
-// $font-primary: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-//   Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-//   'Segoe UI Symbol';
-// $font-book: 'Tenor Sans', sans-serif;
+$font-base: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+$font-book: 'Tenor Sans', sans-serif;
 
 // @mixin typography($size: $font-m, $color: 'initial', $weight: 400, $family: 'initial') {
 //   font-size: $size;
