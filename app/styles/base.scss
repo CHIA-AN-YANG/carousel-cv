@@ -1,6 +1,5 @@
 @use "variables" as *;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200,600,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200..900;1,14..32,200..900&family=Tenor+Sans&display=swap');
 
 :root {
   --texture-bg: url("/images/texture/bg.svg");
@@ -9,17 +8,18 @@
 }
 
 .theme-light {
-  --primary-desktop-c: oklch(0.62 0.15 305);
+  --primary-desktop-c: oklch(0.52 0.12 317);
   --primary-mobile-c: oklch(0.53 0.18 305); // primary color for mobile. Mobile needs more focus and higher contrast
-  --secondary-c: oklch(0.75 0.12 305);
-  --accent-c: oklch(0.97 0.14 98); // color for emphasis
-  --blank-c: oklch(0.97 0.01 98); // color to leave breathing space
-  --frame-c: oklch(0.91 0.01 98); // color for the frame and borders
-  --text-body: oklch(0.22 0.05 305);
+  --secondary-c: oklch(0.69 0.12 318);
+  --accent-c: oklch(0.95 0.16 108.76); // color for emphasis
+  --blank-c: oklch(0.98 0 0); // color to leave breathing space
+  --frame-c: oklch(0.96 0 0); // color for the frame and borders
+  --line-c: #000;
+  --text-body: oklch(0.32 0.02 303.14);
   --text-high-contrast: oklch(0.19 0.01 305);
   --detail-high-contrast: oklch(0.75 0.01 305);
-  --detail-medium-contrast: oklch(0.92 0.01 305);
-  --detail-low-contrast: oklch(0.95 0.01 305);
+  --detail-medium-contrast: oklch(0.94 0 0);
+  --detail-low-contrast: oklch(0.96 0 0);
   --note-c: rgb(46, 109, 188);
   --warning-c: rgb(255, 196, 9);
   --danger-c: rgb(220, 38, 38);
@@ -33,7 +33,7 @@
   --accent-c: #f9f871;
   --blank-c: #f9f9f9;
   --frame-c: #E7E7E7;
-  --line-c: #000;
+  --line-c: #FFF;
   --text-body: #36313d;
   --text-high-contrast: rgb(195, 195, 195);
   --detail-high-contrast: rgb(101, 101, 101);
@@ -52,10 +52,11 @@ html {
   box-sizing: border-box;
   line-height: 1.15;
   background-color: var(--blank-c);
-  font-size: 55%;
   font-family: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
+  font-optical-sizing: auto;
+  font-size: 55%;
 
   @include media-up($screen-md) {
     font-size: 57%;
@@ -75,12 +76,13 @@ html {
 body {
   background-color: var(--blank-c);
   color: var(--text-body);
-  font-size: 1.8rem;
   line-height: 1.65;
+  font-weight: normal;
   margin: 0;
 }
 
 main::before {
+  @extend %inertia;
   content: " ";
   position: absolute;
   top: 0;
@@ -89,7 +91,7 @@ main::before {
   height: 100%;
   filter: contrast(170%);
   background:
-    linear-gradient(to right top, #d16ba58b, var(--secondary-c), rgba(0, 0, 0, 0)), var(--texture-bg), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), var(--texture-bg);
+    linear-gradient(to right top, #ce6ca38c, var(--secondary-c), rgba(0, 0, 0, 0)), var(--texture-bg), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), var(--texture-bg);
 
   @include media-down($screen-sm) {
     background: var(--blank-c);
@@ -105,4 +107,8 @@ header {
   @include media-down($screen-md) {
     top: 0;
   }
+}
+
+h3 {
+  font-weight: 600;
 }

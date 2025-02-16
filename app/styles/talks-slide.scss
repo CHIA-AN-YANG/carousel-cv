@@ -35,7 +35,7 @@
     &__title {
       background: transparent;
       position: absolute;
-      top: 48px;
+      top: 31px;
       left: 4rem;
       -webkit-text-stroke: 1px var(--blank-c);
       z-index: 150;
@@ -136,7 +136,7 @@
       font-weight: 600;
       color: var(--detail-high-contrast);
       background-color: transparent;
-      transition: all 0.3s ease;
+      transition: all 0.5s ease;
 
       &:before {
         content: '';
@@ -264,8 +264,6 @@
         }
       }
     }
-
-
 
     &__dot__text {
       display: none;
