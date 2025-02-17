@@ -4,8 +4,6 @@ import { useDotButton, DotButton } from './DotBotton'
 import { CustomEmblaOptions, Slide } from '../interface'
 import { slideMapper } from '../util/slide-mapper'
 import { Suspense, useEffect, useRef, useState } from 'react'
-import BallIcon from './icons/Ball'
-import useBreakpoint from '../util/breakpoint'
 import Heading from './Heading'
 
 type PropType = {
@@ -22,7 +20,6 @@ const Carousel: React.FC<PropType> = (props) => {
     useDotButton(emblaApi);
 
   const [activeRect, setActiveRect] = useState({ left: 0, width: 0 });
-  const isMobile = useBreakpoint();
   const navRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -81,7 +78,6 @@ const Carousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {options.map((slide) => (
             <section className="embla__slide" key={slide.id} id={slide.content?.slideKey ?? ""}>
-              {(!isMobile && slide.content?.slideKey === 'intro') ? <BallIcon className="ball floating" /> : ""}
               <div className="embla__slide__number" style={{ background: slide.color + ' var(--texture-bg)' }}>
                 <Suspense fallback={<p>Loading...</p>}>
                   {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}

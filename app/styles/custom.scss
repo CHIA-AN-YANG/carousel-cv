@@ -42,7 +42,7 @@
   text-decoration: none;
   text-align: center;
   font-weight: 600;
-  color: var(--detail-medium-contrast);
+  color: var(--detail-low-contrast);
   font-size: 2.4rem;
 
   &:hover {
@@ -61,17 +61,7 @@
   }
 }
 
-@include media-up($screen-sm) {
-  .ball {
-    position: fixed;
-    border-radius: 50%;
-    top: 50px;
-    height: 1400px;
-    left: -80%;
-  }
-}
-
-@include media-down($screen-lg) {
+@include media-down($screen-md) {
   .heading {
     visibility: hidden;
   }
@@ -143,10 +133,6 @@
         height: auto;
       }
     }
-  }
-
-  .ball {
-    display: none;
   }
 }
 
@@ -248,14 +234,14 @@
     &:before {
       content: "⁂✵▔✵ ░▒▓";
       line-height: 1.1;
-      font-size: 18rem;
+      font-size: 8rem;
       user-select: none;
       pointer-events: none;
       touch-action: none;
       color: var(--primary-desktop-c);
       position: absolute;
       left: 312px;
-      top: -100px;
+      top: -87px;
       letter-spacing: 10px;
       opacity: 0.4;
       transform: rotate(-15deg);
@@ -281,6 +267,20 @@
 
     p {
       max-width: 80%;
+    }
+  }
+}
+
+#intro .embla__slide__number {
+  @include media-up($screen-sm) {
+    &::after {
+      content: "";
+      position: fixed;
+      height: 700px;
+      width: 700px;
+      left: 2px;
+      bottom: 2px;
+      background: url("/images/svg/ball.svg") no-repeat center center;
     }
   }
 }
@@ -440,6 +440,13 @@
           border-block-end: 0 solid transparent;
         }
       }
+    }
+  }
+
+  @include media-down($screen-sm) {
+    .project--content__details {
+      padding-bottom: 1rem;
+      margin-top: 1.8rem;
     }
   }
 }
@@ -641,17 +648,19 @@
 
         &.item-4 {
 
-          .wrapper {
-            mask: none;
+          p {
+            height: 40vw;
           }
         }
 
         p {
-          height: auto;
+          height: 1px;
           mix-blend-mode: normal;
           padding: 1.2rem;
-          opacity: 0.9;
-          bottom: -65vw;
+          overflow: hidden;
+          mix-blend-mode: hard-light;
+          bottom: -60vw;
+          transition: all 0.5s 1s ease-in-out;
         }
 
         .letter {
