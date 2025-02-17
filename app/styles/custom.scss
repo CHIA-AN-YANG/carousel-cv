@@ -308,6 +308,9 @@
 .intro--content {
 
   @include media-down($screen-sm) {
+    &__sticker {
+      margin-left: 0;
+    }
 
     &__picture {
       margin-inline: auto;
