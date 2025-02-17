@@ -22,7 +22,7 @@
   },
   {
     "id": 2,
-    "color": "oklch(83.82% 0.0847 209.84/0.44)",
+    "color": "oklch(83.82% 0.0847 209.84/0.5)",
     "title": "projects",
     "titleMobile": "projects",
     "content": {
@@ -32,7 +32,7 @@
   },
   {
     "id": 3,
-    "color": "oklch(83.82% 0.0847 161.12/0.44)",
+    "color": "oklch(83.82% 0.0847 161.12/0.74)",
     "title": "skills",
     "titleMobile": "Skills",
     "content": {

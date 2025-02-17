@@ -2,29 +2,41 @@
   {
     "name": "FalconPack Online",
     "key": "falconpack",
-    "summaryTags": ["frontend lead", "UI/UX support", "develop"],
+    "time": "2023.11 - 2024.5",
+    "summaryTags": ["frontend lead", "Angular","develop"],
     "description": "",
-    "color": "#045f0d"
+    "color": "#097b11"
   },
   {
-    "name": "Wow concept",
+    "name": "WOW Concept",
     "key": "wow",
-    "summaryTags": ["frontend dev", "develop"],
-    "description": "A visually rich e-commerce platform for a client in the fashion industry. The website is built with a focus on user experience and SEO.",
-    "color": "#0e7800"
+    "time": "2023.7 - 2023.11",
+    "summaryTags": ["frontend dev", "develop","GSAP"],
+    "description": "A visually rich e-commerce site for WOW, chained department store in Spain.\n\nThe challenge is to maintain performance while dealing with tones of animations. Yet we need to complete within 3 months! This website is built with a focus on user experience and SEO.",
+    "color": "#54ff19"
   },
   {
     "name": "Pinterview",
     "key": "pinterview",
-    "summaryTags": ["frontend lead", "develop"],
-    "description": "An interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications.",
+    "time": "2022.6 - 2022.12",
+    "summaryTags": ["tech decision", "develop","Vue 2"],
+    "description": "I have designed the UI and made technical decision to used Vue 2, working with two other frontends. It is an interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications.",
     "color": "#ed3838"
+  },
+  {
+    "name": "Model Training",
+    "key": "model",
+    "time": "2024.3 - 2024.5",
+    "summaryTags": ["LLM","Python"],
+    "description": "Data cleansing and model training for academic research. Models like DiffAct and MTCN2 are used. The model is trained to recognize ball type and duration for a tennis game video",
+    "color": "#c69315"
   },
   {
     "name": "Ohgar",
     "key": "ohgar",
+    "time": "2024.7 - now",
     "summaryTags": ["support", "maintenance"],
-    "description": "A living goods e-commerce platform.",
-    "color": "#252525"
+    "description": "A brand based in Europe, had both traditional and SPA site to maintain. Ohgar sales living goods.",
+    "color": "#3b2f4a"
   }
 ]

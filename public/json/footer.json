@@ -18,7 +18,7 @@
     "linkname":"Visit on GitHub"
   },
   { "id":4,
-    "url":"mailto:chiaan.y.creativeworker@gmail.com",
+    "url":"mailto:chiaan.y.creativeworker@gmail.com?subject=Greetings%20From%20Your%20Frontend%20Dev%20CV&body=Hi%20Anna,%0A%0A",
     "iconPath":"/email.svg",
     "iconAlt":"email",
     "linkname":"e-mail me"

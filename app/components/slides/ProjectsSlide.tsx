@@ -35,6 +35,7 @@ const ProjectsSlide: React.FC = () => {
                 </span>
               ))}
             </summary>
+            <time>{project.time}</time>
             {project.key === "falconpack" ? <ProjectFalconPack /> : <p>{project.description}</p>}
           </details>) : ""}
         </div>
