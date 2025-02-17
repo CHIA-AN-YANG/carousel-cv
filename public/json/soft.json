@@ -7,7 +7,7 @@
       "alt": "leadership image"
     },
     "description":
-      "As a frontend lead, I motivate others to achieve technical goals. I also design traing programs and tutor new hires."
+      "As a frontend lead, I prompt members to achieve technical goals. I also design traing materials and tutor new hires."
   },
   {
     "id": 2,
@@ -17,17 +17,17 @@
       "alt": "aesthetic image"
     },
     "description":
-      "With long-term study in Fine Arts and knowledge in UI UX, I am able to bring visual creation and frontend together"
+      "With MA degree in Fine Arts and knowledge in UI UX, I am able to bring visual creation and frontend together."
   },
   {
     "id": 3,
     "title": "Teamwork",
     "image": {
-      "src": "/images/softskills/teamwork.webp",
+      "src": "/images/softskills/business-mindset.webp",
       "alt": "teamwork image"
     },
     "description":
-      "I maintain good communication and collaboration within and outside of my team."
+      "With great communication and emotional security, we move forward smoothly."
   },
   {
     "id": 4,
@@ -37,16 +37,16 @@
       "alt": "cross-cultural image"
     },
     "description":
-      "With co-workers in Spain and customers all over the world. I am open-minded and respect different cultures."
+      "Working with team in Spain and customers all over the world, I respect and enjoy different cultures."
   },
   {
     "id": 5,
     "title": "Agile",
     "image": {
-      "src": "/images/softskills/business-mindset.webp",
+      "src": "/images/softskills/teamwork.webp",
       "alt": "business mindset image"
     },
     "description":
-      "I bring the culture of progressive development and strong business mindset to boost team performance."
+      "I promote the culture of progressive development and build work ethics to boost team performance."
   }
 ]

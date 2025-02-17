@@ -2,10 +2,8 @@ import projects from "@/public/json/projects.json";
 
 const ProjectFalconPack = () => (
   <>
-    <p>We built a brand new
-      <abbr title="business-to-consumer">B2C</abbr>
-      site to replace the existing wordpress site. The new site has custom
-      <abbr title="content management system">CMS</abbr> to manage the content, and is tailered for consumers to:</p>
+    <p>We built a brand new <abbr title="business-to-consumer">B2C</abbr> site to replace the existing wordpress site. The new site has custom
+      &nbsp;<abbr title="content management system">CMS</abbr> to manage the content, and is tailered for consumers to:</p>
     <ul>
       <li>Compare products.</li>
       <li>Memorize consumers geolocations.</li>

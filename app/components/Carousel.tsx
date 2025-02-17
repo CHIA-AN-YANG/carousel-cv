@@ -67,7 +67,6 @@ const Carousel: React.FC<PropType> = (props) => {
         {hasNav ? <svg
           className="nav__emphasis__active"
           width={activeRect.width}
-          height="5rem"
           style={{ transform: `translateX(${activeRect.left}px)` }}
         >
           <rect width="100%" height="100%" fill="currentColor" rx="2" />

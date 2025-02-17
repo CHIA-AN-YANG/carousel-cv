@@ -297,8 +297,10 @@
 
 .intro--container {
   @include media-down($screen-sm) {
+    margin-block-start: 1.2rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 1fr auto;
+    gap: 0;
     max-height: unset;
   }
 }
@@ -318,11 +320,20 @@
     }
 
     &__title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--text-body);
+      -webkit-text-stroke: 0 transparent;
+      font-family: var(--font-tenor);
+      font-weight: 600;
+      margin-block-end: 0;
+
       &:before {
         font-size: 6rem;
         left: 40%;
         top: -180px;
         letter-spacing: 8px;
+        color: var(--detail-high-contrast);
         transform: translateX(-50%) rotate(-15deg);
       }
 
@@ -412,9 +423,9 @@
 
       h3 {
         display: inline;
-        font-size: 2.4rem;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        font-size: 2rem;
+        margin-block-start: 0.8rem;
+        margin-block-end: 0.8rem;
         margin-inline-end: 1.8rem;
       }
 
@@ -589,7 +600,7 @@
         top: 1.8vw;
         left: min(38vw, 38vh);
         color: var(--text-high-contrast);
-        opacity: 0.4;
+        opacity: 0.56;
         z-index: 10;
         text-wrap: nowrap;
         writing-mode: vertical-rl;

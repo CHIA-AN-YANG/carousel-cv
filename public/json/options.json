@@ -4,7 +4,7 @@
     "id": 1,
     "color": "oklch(83.82% 0.0847 7.04/0.44)",
     "title": "introduction",
-    "titleMobile": "bio",
+    "titleMobile": "Intro",
     "content":{
       "description": "This is the first slide of the carousel. It's a jungle out there, so be careful.",
       "slideKey": "intro"

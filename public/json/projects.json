@@ -11,9 +11,9 @@
     "name": "WOW Concept",
     "key": "wow",
     "time": "2023.7 - 2023.11",
-    "summaryTags": ["frontend dev", "develop","GSAP"],
-    "description": "A visually rich e-commerce site for WOW, chained department store in Spain.\n\nThe challenge is to maintain performance while dealing with tones of animations. Yet we need to complete within 3 months! This website is built with a focus on user experience and SEO.",
-    "color": "#54ff19"
+    "summaryTags": ["animation", "develop","GSAP","Performance"],
+    "description": "A visually rich e-commerce site for WOW, chained department store in Spain.The challenge is to maintain performance while dealing with tones of animations. Yet we need to complete within 3 months.",
+    "color": "#2fb700"
   },
   {
     "name": "Pinterview",
@@ -28,8 +28,8 @@
     "key": "model",
     "time": "2024.3 - 2024.5",
     "summaryTags": ["LLM","Python"],
-    "description": "Data cleansing and model training for academic research. Models like DiffAct and MTCN2 are used. The model is trained to recognize ball type and duration for a tennis game video",
-    "color": "#c69315"
+    "description": "Data cleansing and model training for academic research. Models like DiffAct and MTCN2 are used. The model is trained to recognize ball types and start-end for tennis game videos.",
+    "color": "#151ec6"
   },
   {
     "name": "Ohgar",

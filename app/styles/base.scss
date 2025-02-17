@@ -54,9 +54,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  line-height: 1.15;
-  background-color: var(--blank-c);
-  font-size: 55%;
 
   @include media-up($screen-md) {
     font-size: 57%;
@@ -64,6 +61,10 @@ html {
 
   @include media-up($screen-lg) {
     font-size: 62.5%;
+  }
+
+  @include media-down($screen-md) {
+    font-size: 55%;
   }
 }
 
@@ -83,6 +84,9 @@ body {
   margin: 0;
 
   @include media-down($screen-sm) {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100dvh;
   }
@@ -90,18 +94,17 @@ body {
 
 main::before {
   @extend %inertia;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: contrast(170%);
-  background:
-    linear-gradient(to right top, #ce6ca38c, var(--secondary-c), rgba(0, 0, 0, 0)), var(--texture-bg), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), var(--texture-bg);
 
-  @include media-down($screen-sm) {
-    background: var(--blank-c);
+  @include media-up($screen-sm) {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: contrast(170%);
+    background:
+      linear-gradient(to right top, #ce6ca38c, var(--secondary-c), rgba(0, 0, 0, 0)), var(--texture-bg), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), var(--texture-bg);
   }
 }
 
