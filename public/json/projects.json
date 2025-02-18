@@ -19,8 +19,8 @@
     "name": "Pinterview",
     "key": "pinterview",
     "time": "2022.6 - 2022.12",
-    "summaryTags": ["tech decision", "develop","Vue 2"],
-    "description": "I have designed the UI and made technical decision to used Vue 2, working with two other frontends. It is an interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications.",
+    "summaryTags": ["develop","Vue 2","tech decision","UI design"],
+    "description": "I am the UI designer and make frontend technical adoptions in the project, working within a team of 5. It is an interview testing program for internal hiring process. It is also used for mock interviews for developers preparing for certifications.",
     "color": "#ed3838"
   },
   {
@@ -32,11 +32,11 @@
     "color": "#151ec6"
   },
   {
-    "name": "Ohgar",
+    "name": "ADI Ohgar",
     "key": "ohgar",
     "time": "2024.7 - now",
     "summaryTags": ["support", "maintenance"],
-    "description": "A brand based in Europe, had both traditional and SPA site to maintain. Ohgar sales living goods.",
+    "description": "ADI is a leading brand in the market for hospitality and home tableware based in Europe. It has both traditional and SPA (Ohgar) site to maintain. Ohgar sales living goods.",
     "color": "#3b2f4a"
   }
 ]

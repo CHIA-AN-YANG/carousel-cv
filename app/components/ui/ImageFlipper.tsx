@@ -32,8 +32,8 @@ const ImageFlipper: React.FC<ImageFlipperPropType> = ({ images, className }) => 
         <Image
           src={images[currentIndex]}
           alt={`selfie ${[currentIndex]}`}
-          height={200}
-          width={200}
+          sizes='sizes="(max-width:576px) 100px, 200px"'
+          fill
         />
       </div>
     </div>

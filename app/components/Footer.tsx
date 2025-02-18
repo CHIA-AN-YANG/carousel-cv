@@ -36,6 +36,7 @@ const Footer: React.FC = () => {
                 alt={iconAlt || linkname}
                 width={24}
                 height={24}
+                loading='eager'
               />
               <span className="footer__link__text">{linkname}</span>
             </a>

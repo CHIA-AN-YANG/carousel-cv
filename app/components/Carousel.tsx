@@ -38,7 +38,7 @@ const Carousel: React.FC<PropType> = (props) => {
 
       if (target) {
         const { offsetLeft, offsetWidth } = target;
-        setActiveRect({ left: offsetLeft, width: offsetWidth });
+        setActiveRect({ left: offsetLeft + 5, width: offsetWidth - 10 });
       }
     }
   };
@@ -76,8 +76,12 @@ const Carousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {options.map((slide) => (
-            <section className="embla__slide" key={slide.id} id={slide.content?.slideKey ?? ""}>
-              <div className="embla__slide__number" style={{ background: slide.color + ' var(--texture-bg)' }}>
+            <section className="embla__slide"
+              key={slide.id}
+              id={slide.content?.slideKey ?? ""}
+              style={{ "--slide-bg": slide.color } as React.CSSProperties}
+            >
+              <div className="embla__slide__number">
                 <Suspense fallback={<p>Loading...</p>}>
                   {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}
                 </Suspense>

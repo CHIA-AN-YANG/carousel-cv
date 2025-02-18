@@ -32,6 +32,7 @@
       padding: 2.4rem 4rem;
       font-size: 4rem;
       font-weight: 600;
+      background: var(--slide-bg) var(--texture-bg);
       box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
       user-select: none;
       transform: skew(10deg);
@@ -133,6 +134,7 @@
       &__number {
         box-shadow: none;
         transform: none;
+        background: var(--texture-bg);
       }
     }
   }
@@ -147,19 +149,20 @@
 
       .nav__emphasis__active {
         display: block;
-        color: var(--accent-c);
+        color: var(--primary-mobile-c);
         position: absolute;
-        top: 4.2rem;
+        top: 33.2px;
         left: 0;
-        height: 3px;
+        height: 5px;
         transition: all 0.5s ease;
-        // doesn't work ok on IOS mobile with SVG animation
-        //box-shadow: 1px 1px 0 var(--text-body), -1px -1px 0 var(--text-body);
       }
     }
 
     &__dots {
       flex-grow: 1;
+      height: 4.2rem;
+      margin-block: 0.4rem;
+      border-bottom: 2px dashed var(--primary-mobile-c);
       gap: none;
       justify-content: space-between;
       margin-inline-start: 0;
