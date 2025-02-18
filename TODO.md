@@ -6,7 +6,7 @@ each storypoint around 1 hour free time
 |day2||
 |--|--|
 |all storypoint|======================|
-|progress|====================|
+|progress|======================|
 |CV-5|====|
 |CV-2|==|
 |CV-6|======|
@@ -17,7 +17,7 @@ each storypoint around 1 hour free time
 |1.|✅| Add Soft Skill slide|4||
 |2.|✅| RWD mobile|4||
 |3.|✅| RWD tablet|4||
-|4.| N| project content|2||
+|4.|✅| project content|2||
 |5.|✅| deployment|4||
 |6.|✅| Add Skill Tree slide|4||
 
@@ -43,7 +43,7 @@ each storypoint around 1 hour free time
 ### CV-4 Better user experience ⏹️
 |number# | done | desc | storypoints |priority|
 |--|--|------|---|--|
-|1.| N| Add Snap function|2||
+|1.|✅| Add Snap function|2||
 |2.| N| link to scroll to carousel|1||
 |3.| N| Add i18n|4||
 |5.|✅| profile pic (quick win)|0.5||
@@ -66,6 +66,8 @@ https://medium.com/@farihatulmaria/how-to-integrate-css-and-sass-in-next-js-6264
 - D3 hierarchy example:
 https://github.com/necolo/d3-mindmap/blob/master/src/index.ts
 
+- rough paper svg: https://codepen.io/Chokcoco/pen/OJWLXPY
+
 Mobile note
 顏色要比桌面版簡化。2個重點色+3個變化形 -> 2個重點色系
 
@@ -82,3 +84,13 @@ darkmagenta
 - Mobile view took longer than expected -> estimation inaccurate without ui
 - should leave time for Bugifx phase. After deployed, mobile view has many issues. (took around 1 holiday to finish)
 - completed two new features to make mobile view looks nicer (hamburger and navigation highlight)
+
+
+- SASS
+- SASS and SCSS
+- Dart SASS?
+- modulize with @use, and forward with @forward
+- modular in component scope
+- avoid excess code: use "_name.scss", use mixin and extend carfully
+
+- manage styles well -- use opinionated framework / document it
