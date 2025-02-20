@@ -49,12 +49,6 @@ $screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
   touch-action: none;
 }
 
-/* TODO: typography */
-// $font-s: 1.8rem;
-// $font-m: 2rem;
-// $font-l: 2.4rem;
-// $font-xl: 3.2rem;
-
 $font-base: var(--font-inter), 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';
 $font-book: var(--font-tenor), sans-serif;

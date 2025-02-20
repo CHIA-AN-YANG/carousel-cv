@@ -1,7 +1,6 @@
-@use "variables" as *;
+@use "../variables" as *;
 
 .embla {
-  //width: 100vw;
   margin-top: 5rem;
   --slide-height: calc(100vh - 10.4rem);
   --slide-spacing: 0.8rem;

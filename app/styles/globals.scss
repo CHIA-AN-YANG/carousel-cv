@@ -1,4 +1,5 @@
-@forward "./base.scss";
-@forward "./embla.scss";
-@forward "./talks-slide.scss";
-@forward "./custom.scss";
+@forward "base";
+@forward "layout";
+@forward "./pages/embla";
+@forward "./pages/slides";
+@forward "./pages/talks-carousel";
