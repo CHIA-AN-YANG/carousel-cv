@@ -6,15 +6,16 @@ import SoftPowerSlide from '@/components/slides/SoftPowerSlide';
 interface SlideMap {
   [key: string]: React.FC
 }
+
 const map: SlideMap = {
   'intro': IntroSlide,
   'talks': TalksSlide,
   'projects': ProjectsSlide,
   'skills': SkillsSlide,
-  'softpower': SoftPowerSlide,
+  'softpower': SoftPowerSlide
 }
 
 
-export function slideMapper(componentKey: string): React.FC {
-  return map[componentKey];
+export async function slideMapper(componentKey: string): Promise<React.FC> {
+  return await map[componentKey] || map['empty'];
 }
