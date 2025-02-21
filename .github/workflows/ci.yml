@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         browser: [chrome, firefox]
@@ -32,14 +32,11 @@ jobs:
 
       - name: Run Cypress Tests (${{ matrix.browser }})
         uses: cypress-io/github-action@v6
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         with:
           browser: ${{ matrix.browser }}
           record: false
-          
-      - name: Percy Test
-        run: bun percy snapshot
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   lighthouse:
     needs: test
