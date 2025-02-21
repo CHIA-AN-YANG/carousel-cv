@@ -8,7 +8,10 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, edge]
     
     steps:
       - uses: actions/checkout@v4
@@ -27,21 +30,17 @@ jobs:
       - name: Start Next.js Server
         run: bun run start & npx wait-on http://localhost:3000
 
-      - name: Run Cypress Tests (chrome)
+      - name: Run Cypress Tests (${{ matrix.browser }})
         uses: cypress-io/github-action@v6
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         with:
-          browser: chrome
+          browser: ${{ matrix.browser }})
           record: false
 
-      - name: Run Cypress Tests (edge)
-        uses: cypress-io/github-action@v6
+      - name: Percy Test
+        run: bun percy snapshot
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        with:
-          browser: edge
-          record: false
+
 
   lighthouse:
     needs: test
@@ -72,3 +71,12 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: './.github/lighthouse/lighthouse-config.json'
+
+      - name: Upload Lighthouse results
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results-${{ github.run_id }}
+          path: |
+            .lighthouseci/
+            lighthouse-results/
+          retention-days: 7

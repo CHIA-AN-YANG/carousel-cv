@@ -1,7 +1,8 @@
 {
-  "ci": {
+"ci": {
     "collect": {
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "outputDir": "./lighthouse-results"
     },
     "assert": {
       "assertions": {
@@ -10,6 +11,9 @@
         "categories:best-practices": ["error", {"minScore": 0.9}],
         "categories:seo": ["error", {"minScore": 0.9}]
       }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
     }
   }
 }
