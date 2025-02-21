@@ -1,4 +1,4 @@
-const beforeUrl = 'https://carousel-cv.vercel.app/';
+const beforeUrl = 'https://anna-yang-dev.vercel.app/';
 const afterUrl = 'http://localhost:3000';
 
 describe('can start page', () => {
