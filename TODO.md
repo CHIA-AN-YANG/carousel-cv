@@ -94,3 +94,6 @@ darkmagenta
 - avoid excess code: use "_name.scss", use mixin and extend carfully
 
 - manage styles well -- use opinionated framework / document it
+
+```
+bun add cypress @percy/cli @percy/cypress --save-dev
