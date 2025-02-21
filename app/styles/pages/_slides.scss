@@ -123,7 +123,7 @@
   }
 }
 
-#intro .embla__slide__number {
+section#intro>div {
   &:before {
     content: "⁂✵▔✵ ░▒▓";
     line-height: 1.1;
@@ -144,7 +144,7 @@
   }
 }
 
-#intro .embla__slide__number {
+section#intro>div {
   @include media-up($screen-sm) {
 
     &::after {
@@ -159,7 +159,7 @@
   }
 }
 
-#intro .embla__slide__number {
+section#intro>div {
   @include media-down($screen-sm) {
     overflow-y: scroll;
 
@@ -360,7 +360,7 @@
   }
 }
 
-#skills .embla__slide__number {
+section#skills>div {
   padding-inline-end: 0;
 }
 

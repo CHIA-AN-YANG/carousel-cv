@@ -12,7 +12,7 @@ const ProjectFalconPack = () => (
   </>
 );
 
-const ProjectsSlide: React.FC = () => {
+function ProjectsSlide() {
 
   return (
     <>
