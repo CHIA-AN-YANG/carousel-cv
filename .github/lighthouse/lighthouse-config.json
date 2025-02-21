@@ -2,7 +2,7 @@
 "ci": {
     "collect": {
       "numberOfRuns": 3,
-      "outputDir": "./lighthouse-results"
+      "outputDir": "./lighthouseci"
     },
     "assert": {
       "assertions": {

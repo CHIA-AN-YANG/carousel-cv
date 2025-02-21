@@ -71,12 +71,3 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: './.github/lighthouse/lighthouse-config.json'
-
-      - name: Upload Lighthouse results
-        uses: actions/upload-artifact@v4
-        with:
-          name: lighthouse-results-${{ github.run_id }}
-          path: |
-            lighthouse/
-            lighthouse-results/
-          retention-days: 7
