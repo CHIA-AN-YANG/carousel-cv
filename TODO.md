@@ -97,3 +97,6 @@ darkmagenta
 
 ```
 bun add cypress @percy/cli @percy/cypress --save-dev
+
+firefox not working with cypress:
+https://github.com/cypress-io/cypress/issues/22086

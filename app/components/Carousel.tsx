@@ -83,9 +83,11 @@ const Carousel: React.FC<PropType> = (props) => {
               style={{ "--slide-bg": slide.color } as React.CSSProperties}
             >
               <div className={styles.embla__slide__number}>
-                <Suspense fallback={<p>Loading...</p>}>
-                  {slide.content?.slideKey ? slideMapper(slide.content.slideKey)({}) : ""}
-                </Suspense>
+                {slide.content?.slideKey ? (
+                  <Suspense fallback={<div>Loading...</div>}>
+                    {slideMapper(slide.content.slideKey).then(Component => <Component />)}
+                  </Suspense>
+                ) : ""}
                 <div className="content__mask"></div>
               </div>
             </section>
