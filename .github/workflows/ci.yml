@@ -33,7 +33,7 @@ jobs:
       - name: Run Cypress Tests (${{ matrix.browser }})
         uses: cypress-io/github-action@v6
         with:
-          browser: ${{ matrix.browser }})
+          browser: ${{ matrix.browser }}
           record: false
 
       - name: Percy Test
