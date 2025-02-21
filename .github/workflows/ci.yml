@@ -9,9 +9,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        browser: [chrome, firefox]
     
     steps:
       - uses: actions/checkout@v4
@@ -30,12 +27,20 @@ jobs:
       - name: Start Next.js Server
         run: bun run start & npx wait-on http://localhost:3000
 
-      - name: Run Cypress Tests (${{ matrix.browser }})
+      - name: Run Cypress Tests (chrome)
         uses: cypress-io/github-action@v6
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         with:
-          browser: ${{ matrix.browser }}
+          browser: chrome
+          record: false
+
+      - name: Run Cypress Tests (firefox)
+        uses: cypress-io/github-action@v6
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        with:
+          browser: firefox
           record: false
 
   lighthouse:
