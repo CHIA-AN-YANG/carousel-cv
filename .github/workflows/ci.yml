@@ -35,12 +35,12 @@ jobs:
           browser: chrome
           record: false
 
-      - name: Run Cypress Tests (firefox)
+      - name: Run Cypress Tests (edge)
         uses: cypress-io/github-action@v6
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         with:
-          browser: firefox
+          browser: edge
           record: false
 
   lighthouse:
