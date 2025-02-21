@@ -1,4 +1,4 @@
-@use "@/styles/_variables.scss" as *;
+@use "../variables" as *;
 
 .embla {
   margin-top: 5rem;
@@ -85,11 +85,11 @@
     font-size: 1.8rem;
     overflow: hidden;
 
-    &_selected {
+    &--selected {
       width: 150px;
       background-color: var(--detail-medium-contrast);
 
-      .button_text_desktop {
+      .button--text__desktop {
         display: inline-block;
         text-wrap: nowrap;
       }
@@ -107,13 +107,11 @@
   }
 }
 
-
-.button_text {
+.button--text {
   display: none;
   font-weight: 600;
   text-transform: capitalize;
 }
-
 
 .embla {
   @include media-down($screen-md) {
@@ -177,7 +175,7 @@
       }
     }
 
-    .button_text_mobile {
+    .button--text__mobile {
       display: inline;
       text-wrap: nowrap;
       font-size: 1.8rem;
@@ -191,10 +189,10 @@
       justify-content: flex-start;
       border: none;
 
-      &_selected {
+      &--selected {
         background-color: transparent;
 
-        .button_text_desktop {
+        .button--text__desktop {
           display: none;
         }
       }

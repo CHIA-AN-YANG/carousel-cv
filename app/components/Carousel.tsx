@@ -3,9 +3,8 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { useDotButton, DotButton } from './DotBotton'
 import { CustomEmblaOptions, Slide } from '../interface'
 import { slideMapper } from '../util/slide-mapper'
-import { Suspense, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Heading from './Heading'
-import styles from './Carousel.module.scss'
 
 type PropType = {
   config?: CustomEmblaOptions,
@@ -45,28 +44,27 @@ const Carousel: React.FC<PropType> = (props) => {
   };
 
   return (
-    <main className={styles.embla}>
-      <header className={styles.embla__controls}>
-        <div ref={navRef} className={styles.embla__dots}>
+    <main className="embla">
+      <header className="embla__controls">
+        <div ref={navRef} className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => handleButtonClick(index)}
-              className={`${styles.embla__dot} ${index === selectedIndex ? styles.embla__dot_selected : ""}`}
+              className={`embla__dot ${index === selectedIndex ? "embla__dot--selected" : ""}`}
             >
-              <span className={`${styles.button_text} ${styles.button_text_desktop}`}>
+              <span className="button--text button--text__desktop">
                 {options[index].title || index + 1}
               </span>
               <span
-                className={`${styles.button_text} ${styles.button_text_mobile}`}
-              >
+                className="button--text button--text__mobile">
                 {options[index].titleMobile || index + 1}
               </span>
             </DotButton>
           ))}
         </div>
         {hasNav ? <svg
-          className={styles.nav__emphasis__active}
+          className="nav__emphasis__active"
           width={activeRect.width}
           style={{ transform: `translateX(${activeRect.left}px)` }}
         >
@@ -74,20 +72,16 @@ const Carousel: React.FC<PropType> = (props) => {
         </svg> : ""}
       </header>
       <Heading></Heading>
-      <div className={styles.embla__viewport} ref={emblaRef}>
-        <div className={styles.embla__container}>
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
           {options.map((slide) => (
-            <section className={styles.embla__slide}
+            <section className="embla__slide"
               key={slide.id}
               id={slide.content?.slideKey ?? ""}
               style={{ "--slide-bg": slide.color } as React.CSSProperties}
             >
-              <div className={styles.embla__slide__number}>
-                {slide.content?.slideKey ? (
-                  <Suspense fallback={<div>Loading...</div>}>
-                    {slideMapper(slide.content.slideKey).then(Component => <Component />)}
-                  </Suspense>
-                ) : ""}
+              <div className="embla__slide__number">
+                {slide.content?.slideKey ? slideMapper(slide.content.slideKey) : ""}
                 <div className="content__mask"></div>
               </div>
             </section>

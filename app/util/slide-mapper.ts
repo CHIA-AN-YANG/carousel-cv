@@ -3,8 +3,9 @@ import ProjectsSlide from '@/components/slides/ProjectsSlide';
 import TalksSlide from '@/components/slides/TalksSlide';
 import SkillsSlide from '@/components/slides/SkillsSlide';
 import SoftPowerSlide from '@/components/slides/SoftPowerSlide';
+import { JSX, ReactNode } from 'react';
 interface SlideMap {
-  [key: string]: React.FC
+  [key: string]: () => JSX.Element;
 }
 
 const map: SlideMap = {
@@ -16,6 +17,6 @@ const map: SlideMap = {
 }
 
 
-export async function slideMapper(componentKey: string): Promise<React.FC> {
-  return await map[componentKey] || map['empty'];
+export function slideMapper(componentKey: string): ReactNode {
+  return map[componentKey]() ?? null;
 }
