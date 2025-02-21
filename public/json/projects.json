@@ -16,6 +16,14 @@
     "color": "#2fb700"
   },
   {
+    "name": "Minithread",
+    "key": "minithread",
+    "time": "2024.12 - 2024.1",
+    "summaryTags": ["Java","Spring Boot","PostgreSQL"],
+    "description": "A social media platform for tutorial use. It is a project with Sprint Boot and PostgreSQL",
+    "color": "#f7b500"
+  },
+  {
     "name": "Pinterview",
     "key": "pinterview",
     "time": "2022.6 - 2022.12",
