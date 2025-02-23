@@ -30,10 +30,8 @@ jobs:
       - name: Start Next.js Server
         run: bun run start & npx wait-on http://localhost:3000
 
-      - name: Percy and Cypress Test (${{ matrix.browser }})
+      - name: Percy and Cypress Test
         run: bun run percy
-        with: 
-          browser: ${{ matrix.browser }}
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 

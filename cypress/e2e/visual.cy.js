@@ -35,11 +35,8 @@ describe('Carousel is working', () => {
 });
 describe('Percy Snapshot for UI', () => {
   it('captures homepage', () => {
-    // cy.origin('https://anna-yang-dev.vercel.app/', () => {
-    //   // cy.percySnapshot is not a function
-    //   cy.percySnapshot('Homepage prod build', { widths: [375, 768, 1280] });
-    // });
     cy.visit('/');
-    cy.percySnapshot('Homepage After', { widths: [375, 768, 1280] });
+    cy.wait(500);
+    cy.percySnapshot('Homepage After', { widths: [375, 768, 4000] });
   });
 });
