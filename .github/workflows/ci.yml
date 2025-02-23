@@ -30,14 +30,10 @@ jobs:
       - name: Start Next.js Server
         run: bun run start & npx wait-on http://localhost:3000
 
-      - name: Run Cypress Tests (${{ matrix.browser }})
-        uses: cypress-io/github-action@v6
-        with:
+      - name: Percy and Cypress Test (${{ matrix.browser }})
+        run: bun run percy
+        with: 
           browser: ${{ matrix.browser }}
-          record: false
-
-      - name: Percy Test
-        run: bun percy snapshot
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
@@ -70,5 +66,5 @@ jobs:
             http://localhost:3000
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: './.github/lighthouseci/lighthouse-config.json'
+          configPath: './.github/lighthouse/lighthouserc.json'
         

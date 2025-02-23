@@ -5,6 +5,7 @@ export default defineConfig({
     baseUrl: 'http://localhost:3000',
     setupNodeEvents(on, config) {
       // Implement event listeners if needed
-    }
+    },
+    supportFolder: 'cypress/support',
   },
 })
