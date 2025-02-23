@@ -129,11 +129,12 @@
       min-width: 0;
       padding-left: 0;
       transform: none;
+      background: var(--texture-bg);
 
       &__number {
         box-shadow: none;
         transform: none;
-        background: var(--texture-bg);
+        background: none;
       }
     }
   }
@@ -209,8 +210,7 @@
     &__slide {
       &__number {
         padding-inline: 2rem;
-        padding-top: 7rem;
-        background-repeat: repeat;
+        margin-top: 5rem;
       }
     }
   }
