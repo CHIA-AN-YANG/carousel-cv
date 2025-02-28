@@ -22,16 +22,16 @@ jobs:
           bun-version: latest
 
       - name: Install Dependencies
-        run: bun install
+        run: cd frontend && bun install
 
       - name: Build Next.js
-        run: bun run build
+        run: cd frontend && bun run build
         
       - name: Start Next.js Server
-        run: bun run start & npx wait-on http://localhost:3000
+        run: cd frontend && bun run start & npx wait-on http://localhost:3000
 
       - name: Percy and Cypress Test
-        run: bun run percy
+        run: cd frontend && bun run percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
@@ -49,13 +49,13 @@ jobs:
           bun-version: latest
 
       - name: Install Dependencies
-        run: bun install
+        run: cd frontend && bun install
 
       - name: Build Next.js
-        run: bun run build
+        run: cd frontend && bun run build
         
       - name: Start Next.js Server
-        run: bun run start & npx wait-on http://localhost:3000
+        run: cd frontend && bun run start & npx wait-on http://localhost:3000
 
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
@@ -64,5 +64,4 @@ jobs:
             http://localhost:3000
           uploadArtifacts: true
           temporaryPublicStorage: true
-          configPath: './.github/lighthouse/lighthouserc.json'
-        
+          configPath: './frontend/.github/lighthouse/lighthouserc.json'

@@ -52,6 +52,38 @@ npx tsx index.ts # check running environment
 bun index.js # switch to bun environment
 ```
 
+### Run
+```bash
+bun install
+# build and run on ssr mode
+bun run build
+bun run start
+# run in developer mode
+bun dev
+```
+### Do testing with cypress and percy
+To do cypress test, do the following:
+```bash
+# first start the frontend application
+bun dev
+# run cypress test
+bun run cypress
+```
+1. To have percy, go to percy, create an account and set up
+2. Get percy token and run the following script
+3. This will upload percy screenshot to your account. After execution, check screenshots at percy platform
+
+```bash
+# add token to environment
+export PERCY_TOKEN=<your percy token>
+# start application
+bun dev
+# run percy along with cypress. 
+bun run percy
+```
+
+
+
 ### Live Demo 
 Live demo at: [carousel-cv Vercel](https://carousel-cvvercel0.vercel.app/)
 

@@ -1,0 +1,73 @@
+CHIA-AN YANG
+16 May 1990 | +886 0911-315-207 | 161 HongXiao Rd, Xitun Dist, Taichung City, Taiwan
+
+Summary
+Dedicated Frontend Engineer with a strong foundation in web development and a passion for creating seamless user experiences. Extensive experience in e-commerce and application development. Skilled in JavaScript, various frameworks, and cloud technologies. Thrives in collaborative environments and eager to embrace new challenges.
+
+Work Experience
+Seidor APA, Taichung City, Taiwan
+August 2021 - Present
+
+Mid 2023 – Present | Individual Contributor
+
+Resolved frontend bottlenecks and collaborated with frontend and full-stack developers across projects.
+Implemented SEO, GTM, GA, and other e-commerce frontend features in collaboration with the marketing team.
+Performed basic backend Java debugging and API integration, enhancing full-stack skills.
+Handled cloud deployment tasks, branch management, and tag management.
+Mid 2022 – 2023 | Frontend Lead
+
+Developed e-commerce features with a team of 1-3 frontend members using SAP Composable Storefront.
+Integrated UI design with the OOTB design system.
+Applied best practices in state management and icon libraries.
+Designed frontend tasks on Jira, balancing quality with available labor resources.
+Provided training and documentation for frontend development within the company.
+2021 - Mid 2022 | Frontend Developer
+
+Collaborated with two members to build an exam web application for international recruitment.
+Standardized project processes (Git, Vue.js, browser developer tools, Kanban workflow).
+Conducted code reviews and managed Git flow.
+Configured Prettier and ESLint with pre-commit hooks.
+Unified plugin and decorator usage.
+Improved page loading times using Service Worker and IndexedDB.
+Adopted TypeScript, reducing runtime debugging time by 80%.
+Projects
+FalconPack – A leading packaging supplier in the UAE | Frontend Lead
+
+Created frontend file structure, design norms, and documentation.
+Developed tickets or assisted Business Analysts in ticket creation.
+Designed UI flows based on user specifications.
+Collaborated with UI designers to identify feasible UI solutions.
+Mentored junior front-end developers and resolved bottlenecks.
+WOW – An E-Commerce site based in Spain | Frontend Developer
+
+Utilized GSAP to create animated components while incorporating CMS features.
+Developed new CMS component types for customized design.
+Enhanced styling and visual elements.
+Ohgar – Wholesale suppliers of tableware and kitchenware in Spain | Frontend Developer
+
+Resolved technical bottlenecks.
+Addressed upgrade issues.
+Reason for Leaving: Seeking new challenges in different business domains.
+
+Education
+Goldsmiths College, University of London
+MFA Fine Art (2015 – 2017)
+
+National Taiwan Normal University
+Bachelor of Fine Arts (Minor in English) (2009 – 2013)
+
+Language Skills
+English: B2
+Mandarin/Traditional Chinese: C2 (native)
+Spanish: A2
+Computer Skills
+Programming Languages: JavaScript, Python, Java
+Frameworks/Libraries: Angular, Vue, React, Spring MVC
+Version Control: Git
+Operating Systems: Mac OS, Linux (Ubuntu), Windows
+Tools: Docker, Figma, AI supporting tools
+Others: Google Cloud Platform, Google Search Console, SAP Commerce
+
+Speaker Engagements
+MWC Taiwan 2023
+Topic: Frontend Application of Headless CMS
