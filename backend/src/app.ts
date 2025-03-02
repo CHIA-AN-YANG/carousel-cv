@@ -8,9 +8,11 @@ dotenv.config();
 const app = express();
 
 const PORT = process.env.PORT || 4000;
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
+
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with your Next.js app's origin
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: FRONTEND_URL,
+  optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 

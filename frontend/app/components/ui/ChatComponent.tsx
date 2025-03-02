@@ -2,7 +2,7 @@ import { useState } from "react";
 import { boldPattern } from "../../util/regex";
 import axios from "axios";
 import Image from "next/image";
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:4000";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 const ChatComponent: React.FC = () => {
   const [message, setMessage] = useState<string>("");
@@ -18,9 +18,8 @@ const ChatComponent: React.FC = () => {
       const response = await axios.post(`${BACKEND_URL}/api/ai/chat`, { message });
       const aiResponse = response.data?.message?.text || "No response";
 
-      // Store the conversation
       setResponses((prev) => [...prev, { user: "ai", message: aiResponse }]);
-      setMessage(""); // Clear input field
+      setMessage("");
     } catch (error) {
       console.error("Error fetching AI response:", error);
     }

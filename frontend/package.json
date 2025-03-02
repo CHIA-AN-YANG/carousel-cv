@@ -2,6 +2,7 @@
   "name": "carousel-cv-frontend",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,37 +12,34 @@
     "percy": "percy exec -- cypress run"
   },
   "dependencies": {
-    "@percy/cli": "^1.30.7",
-    "@percy/cypress": "^3.1.4",
-    "@types/d3": "^7.4.3",
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.8.5",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19",
-    "cypress": "^14.0.3",
     "d3": "^7.9.0",
+    "dotenv": "^16.4.7",
     "embla-carousel": "^8.5.2",
     "embla-carousel-fade": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "embla-carousel-wheel-gestures": "^8.0.1",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.84.0",
-    "typescript": "^5.7.3",
-    "wait-on": "^8.0.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@percy/cli": "^1.30.7",
+    "@percy/cypress": "^3.1.4",
+    "@types/d3": "^7.4.3",
+    "@types/node": "^22.8.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19",
+    "typescript": "^5.7.3",
+    "cypress": "^14.0.3",
     "postcss": "^8",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "@eslint/eslintrc": "^3",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "sass": "^1.84.0",
+    "wait-on": "^8.0.2"
   },
   "module": "index.ts",
-  "type": "module",
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+  "type": "module"
 }
