@@ -4,6 +4,7 @@ import TalksSlide from '@/components/slides/TalksSlide';
 import SkillsSlide from '@/components/slides/SkillsSlide';
 import SoftPowerSlide from '@/components/slides/SoftPowerSlide';
 import { JSX, ReactNode } from 'react';
+import ChatSlide from '@/components/slides/ChatSlide';
 interface SlideMap {
   [key: string]: () => JSX.Element;
 }
@@ -13,7 +14,8 @@ const map: SlideMap = {
   'talks': TalksSlide,
   'projects': ProjectsSlide,
   'skills': SkillsSlide,
-  'softpower': SoftPowerSlide
+  'softpower': SoftPowerSlide,
+  'chat': ChatSlide
 }
 
 

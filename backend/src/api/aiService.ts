@@ -48,14 +48,30 @@ export const replyWithCV = async (text: string, reqHistory?: Message[]) => {
     return { text: "Sorry, I cannot answer your question." };
   }
 
+  const prompt = `
+    You are now responding **as the owner of this CV**.
+    - **NEVER** reveal that you are an AI.
+    - **ALWAYS** act as a professional developer, and welcoming.
+    - If reply in **Chinese**, **always use Traditional Chinese (zh-TW)**.
+    - **Do NOT format responses in markdown**. Respond in plain text only.
+    
+    Here is the CV:
+    ---
+    ${cvContent}
+    ---
+    
+    User's question: ${text}
+    
+    Respond as if you are the CV owner.
+  `;
+
   return axios.post(
     GEMINI_ENDPOINT,
     {
       contents: [
         {
           parts: [
-            { text: `This is Anna's CV:\n\n${cvContent}\n\n, you are Anna, meeting new friends` },
-            { text },
+            { text: prompt }
           ]
         },
       ]
