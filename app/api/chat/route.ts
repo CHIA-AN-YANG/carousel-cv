@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import fs from "fs/promises";
 import { encode } from "gpt-tokenizer";
 import axios, { AxiosResponse } from "axios";
-import { GenerateContentResponse } from '@google/generative-ai';
+import { Content, GenerateContentResponse } from '@google/generative-ai';
 import path from 'path';
 
 dotenv.config();
@@ -13,60 +13,8 @@ const FILE_PATH = path.join(process.cwd(), "public", "txt/ai-cv.txt");
 const MODE = process.env.MODE;
 const MAX_TOKENS = 1000;
 
-
-const readCVFile = async (filePath: string) => {
-  try {
-    return await fs.readFile(filePath, "utf-8");
-  } catch (error) {
-    console.error("Error reading CV file:", error);
-    return null;
-  }
-};
-
-const estimateTokens = (text: string) => {
-  return encode(text).length;
-};
-
-const createPrompt = (cvContent: string, message: string) => {
-  const prompt = `
-    You are now responding **as the owner of this CV**.
-    - **NEVER** reveal that you are an AI.
-    - **ALWAYS** act professionally, politely, and welcoming.
-    - If asked to reply in **Chinese**, **always use Traditional Chinese (zh-TW)**.
-    - **Use dialogue style** in your responses, like a natural conversation.
-    - **Do NOT format responses in markdown**. Respond in plain text only.
-    
-    Here is the CV:
-    ---
-    ${cvContent}
-    ---
-    
-    User's question: ${message}
-    
-    Respond as if you are the CV owner.
-  `;
-  return { contents: [{ parts: [{ text: prompt }] }] };
-};
-
 interface NewGenerateContentResponse extends GenerateContentResponse {
   modelVersion?: string;
-}
-
-const setResponse = (response: AxiosResponse<NewGenerateContentResponse>) => {
-  const result = {};
-  const genContentResult = response.data;
-  if (genContentResult.candidates?.length && genContentResult.candidates[0].content.parts[0].text) {
-    Object.assign(result, { text: genContentResult.candidates[0].content.parts[0].text });
-  }
-  if (MODE === "debug") {
-    if (genContentResult.usageMetadata) {
-      Object.assign(result, { usageMetadata: genContentResult.usageMetadata });
-    }
-    if (genContentResult.modelVersion) {
-      Object.assign(result, { modelVersion: genContentResult.modelVersion });
-    }
-  }
-  return result;
 }
 
 export async function POST(req: Request) {
@@ -74,7 +22,7 @@ export async function POST(req: Request) {
   const estimatedTokens = estimateTokens(message);
   const cvContent = await readCVFile(FILE_PATH);
 
-  if (!message) {
+  if (!message.trim()) {
     return new Response(JSON.stringify({ text: "Did you say something? I couldn't hear you." }), { status: 400 });
   }
   if (!GEMINI_API_KEY) {
@@ -106,3 +54,47 @@ export async function POST(req: Request) {
     new Response(JSON.stringify({ text: "Sorry, I cannot reply in the moment 😕" }), { status: 500 });
   };
 };
+
+async function readCVFile(filePath: string) {
+  try {
+    return await fs.readFile(filePath, "utf-8");
+  } catch (error) {
+    console.error("Error reading CV file:", error);
+    return null;
+  }
+};
+
+function estimateTokens(text: string) {
+  return encode(text).length;
+};
+
+function createPrompt(cvContent: string, message: string) {
+  const prompt = `
+    You are now responding **as the owner of this CV**.
+    - **NEVER** reveal that you are an AI.
+    - **ALWAYS** act professionally, politely, and welcoming.
+    - If asked to reply in **Chinese**, **always use Traditional Chinese (zh-TW)**.
+    - **Use dialogue style** in your responses, like a natural conversation.
+    - **Do NOT format responses in markdown**. Respond in plain text only.
+    
+    Here is the CV:
+    ---
+    ${cvContent}
+    ---
+    
+    User's question: ${message}
+    
+    Respond as if you are the CV owner.
+  `;
+  return { contents: [{ parts: [{ text: prompt }] }] };
+};
+
+function setResponse(response: AxiosResponse<NewGenerateContentResponse>) {
+  const genContentResult = response.data;
+  const text = genContentResult.candidates?.length ? genContentResult.candidates[0].content.parts[0].text : "";
+  return {
+    ...(text ? { text } : {}),
+    ...(MODE === "debug" && genContentResult.usageMetadata ? { usageMetadata: genContentResult.usageMetadata } : {}),
+    ...(MODE === "debug" && genContentResult.modelVersion ? { modelVersion: genContentResult.modelVersion } : {})
+  };
+}
