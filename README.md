@@ -85,6 +85,6 @@ bun run percy
 
 
 ### Live Demo 
-Live demo at: [carousel-cv Vercel](https://carousel-cvvercel0.vercel.app/)
+Live demo at: [carousel-cv Vercel](https://anna-yang-dev.vercel.app)
 
 

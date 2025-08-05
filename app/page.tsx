@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://anna-yang-dev.vercel.app/site-preview.jpg',
-        width: 1200,
-        height: 630,
+        url: 'https://anna-yang-dev.vercel.app/images/site-preview.webp',
+        width: 2148,
+        height: 1144,
         alt: 'Anna Yang Portfolio Preview',
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Anna Yang | Frontend Developer Portfolio',
     description: 'Explore the work and projects of Anna Yang...',
-    images: ['https://anna-yang-dev.vercel.app/site-preview.jpg'],
+    images: ['https://anna-yang-dev.vercel.app/images/site-preview.webp'],
   },
 }
 

@@ -6,7 +6,7 @@ function IntroSlide() {
     <>
       <div className="intro--content__sticker content__sticker">
         <ImageFlipper
-          images={["/images/avatars/selfie.jpg", "/images/avatars/jump.webp"]}
+          images={["/images/avatars/selfie.webp", "/images/avatars/short-hair.webp", "/images/avatars/jump.webp"]}
           className="intro--content__picture"
         />
       </div>

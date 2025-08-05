@@ -52,7 +52,7 @@ const ChatComponent: React.FC = () => {
         <div className="rounded">
           <Image
             className={loading ? "" : "active"}
-            src="/images/avatars/lego-figure.png"
+            src="/images/avatars/lego-figure.webp"
             alt="anna avatar"
             sizes='(max-width: 768px) 70px, 120px'
             fill
