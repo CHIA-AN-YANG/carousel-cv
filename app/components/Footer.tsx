@@ -4,7 +4,6 @@ import links from "@/public/json/footer.json";
 import Image from "next/image";
 import BurgerIcon from './icons/Burger';
 import { useState } from 'react';
-import { sendGTMEvent } from '@next/third-parties/google';
 import { GtmEventNames, trackGtmEvent } from '../util/analytics-helper';
 export interface FooterLink {
   url: string

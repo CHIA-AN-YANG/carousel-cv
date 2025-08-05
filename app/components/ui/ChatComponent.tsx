@@ -2,7 +2,6 @@ import { useState } from "react";
 import { boldPattern } from "../../util/regex";
 import axios from "axios";
 import Image from "next/image";
-import { sendGTMEvent } from '@next/third-parties/google';
 import { GtmEventNames, trackGtmEvent } from '../../util/analytics-helper';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
