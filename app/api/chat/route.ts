@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import fs from "fs/promises";
 import { encode } from "gpt-tokenizer";
 import axios, { AxiosResponse } from "axios";
-import { Content, GenerateContentResponse } from '@google/generative-ai';
+import { GenerateContentResponse } from '@google/generative-ai';
 import path from 'path';
 
 dotenv.config();

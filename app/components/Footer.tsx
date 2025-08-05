@@ -5,6 +5,7 @@ import Image from "next/image";
 import BurgerIcon from './icons/Burger';
 import { useState } from 'react';
 import { sendGTMEvent } from '@next/third-parties/google';
+import { GtmEventNames, trackGtmEvent } from '../util/analytics-helper';
 export interface FooterLink {
   url: string
   iconPath: string
@@ -24,31 +25,33 @@ const Footer: React.FC = () => {
   }
 
   return (
-    <div className={`burger ${bugerOpen ? "burger__open" : "burger__closed"}`} >
-      <div className="wrapper" onClick={handleClick}>
-        <BurgerIcon />
+    <>
+      <div className={`burger ${bugerOpen ? "burger__open" : "burger__closed"}`} >
+        <div className="wrapper" onClick={handleClick}>
+          <BurgerIcon />
+        </div>
+        < footer className="footer" >
+          {
+            LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
+              <a key={url}
+                className="footer__link"
+                href={url}
+                onClick={() => trackGtmEvent(GtmEventNames.CLICK, { link: linkname })}
+              >
+                <Image className="footer__link__svg"
+                  src={"./images/footer" + iconPath}
+                  alt={iconAlt || linkname}
+                  width={24}
+                  height={24}
+                  loading='eager'
+                />
+                <span className="footer__link__text">{linkname}</span>
+              </a>
+            ))
+          }
+        </footer >
       </div>
-      < footer className="footer" >
-        {
-          LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
-            <a key={url}
-              className="footer__link"
-              href={url}
-              onClick={() => sendGTMEvent({ event: 'click_personal-link', value: linkname })}
-            >
-              <Image className="footer__link__svg"
-                src={"./images/footer" + iconPath}
-                alt={iconAlt || linkname}
-                width={24}
-                height={24}
-                loading='eager'
-              />
-              <span className="footer__link__text">{linkname}</span>
-            </a>
-          ))
-        }
-      </footer >
-    </div>
+    </>
   )
 }
 

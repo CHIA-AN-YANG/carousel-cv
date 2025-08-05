@@ -3,6 +3,7 @@ import { boldPattern } from "../../util/regex";
 import axios from "axios";
 import Image from "next/image";
 import { sendGTMEvent } from '@next/third-parties/google';
+import { GtmEventNames, trackGtmEvent } from '../../util/analytics-helper';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 const ChatComponent: React.FC = () => {
@@ -17,7 +18,8 @@ const ChatComponent: React.FC = () => {
     try {
       const { data } = await axios.post(`${BACKEND_URL}/chat`, { message });
       setResponses((prev) => [...prev, { user: "ai", message: data.text }]);
-      sendGTMEvent({ event: 'click_send-chat', value: message });
+      trackGtmEvent(GtmEventNames.FORM_SUBMIT, { 'sent_message': message });
+      trackGtmEvent(GtmEventNames.FORM_SUBMIT, { 'receive_message': data.text });
       setMessage("");
     } catch (error) {
       console.error("Error fetching AI response:", error);
