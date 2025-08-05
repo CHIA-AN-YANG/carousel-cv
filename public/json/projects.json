@@ -5,7 +5,7 @@
     "time": "2023.11 - 2024.5",
     "summaryTags": ["frontend lead", "Angular","CMS"],
     "description": "",
-    "color": "#097b11"
+    "color": "#57bb55"
   },
   {
     "name": "WOW Concept",
@@ -13,7 +13,7 @@
     "time": "2023.7 - 2023.11",
     "summaryTags": ["animation", "develop","GSAP","Performance"],
     "description": "A visually rich e-commerce site for WOW, chained department store in Spain.The challenge is to maintain performance while dealing with tones of animations. Yet we need to complete within 3 months.",
-    "color": "#2fb700"
+    "color": "#80bc14"
   },
   {
     "name": "Minithread",
@@ -37,7 +37,7 @@
     "time": "2024.3 - 2024.5",
     "summaryTags": ["LLM","Python"],
     "description": "Data cleansing and model training for academic research. Models like DiffAct and MTCN2 are used. The model is trained to recognize ball types and start-end for tennis game videos.",
-    "color": "#151ec6"
+    "color": "#5a8eff"
   },
   {
     "name": "ADI Ohgar",
@@ -45,6 +45,6 @@
     "time": "2024.7 - now",
     "summaryTags": ["support", "maintenance"],
     "description": "ADI is a leading brand in the market for hospitality and home tableware based in Europe. It has both traditional and SPA (Ohgar) site to maintain. Ohgar sales living goods.",
-    "color": "#3b2f4a"
+    "color": "#877999"
   }
 ]

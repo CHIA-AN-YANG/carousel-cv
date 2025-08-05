@@ -153,7 +153,7 @@ section#intro>div {
       height: 700px;
       width: 700px;
       left: 2px;
-      bottom: 2px;
+      top: 2px;
       background: url("/images/svg/ball.svg") no-repeat center center;
     }
   }
@@ -269,7 +269,7 @@ section#intro>div {
   overflow-y: scroll;
 
   .content__title {
-    background: #85efffb4 var(--texture-bg);
+    background: #3d5558b4 var(--texture-bg);
   }
 
   .project--content__details {
@@ -279,7 +279,7 @@ section#intro>div {
     margin-top: 10px;
     border-radius: 0.8rem;
     font-size: 2rem;
-    color: var(--text-high-contrast);
+    color: var(--text-body);
     --project-primary: var(--brand-primary);
 
     p,

@@ -1,9 +1,9 @@
 <svg viewBox="0 0 100 100"
   xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="ballGradient" cx="45%" cy="10%" r="80%">
-      <stop offset="3%" stop-color="#fce4ff"></stop>
-      <stop offset="100%" stop-color="#ffcc00"></stop>
+    <radialGradient id="ballGradient" cx="45%" cy="80%" r="80%">
+      <stop offset="3%" stop-color="transparent"></stop>
+      <stop offset="90%" stop-color="#fce4ff"></stop>
     </radialGradient>
     <filter id="noiseFilter">
       <feTurbulence type="fractalNoise" baseFrequency="4" numOctaves="4" result="noise"></feTurbulence>
@@ -11,5 +11,5 @@
       <feComposite in2="noise" in="SourceGraphic" operator="in" />
     </filter>
   </defs>
-  <circle cx="0" cy="100" r="100" fill="url(#ballGradient)" filter="url(#noiseFilter)"></circle>
+  <circle cx="0" cy="0" r="100" fill="url(#ballGradient)" filter="url(#noiseFilter)"></circle>
 </svg>

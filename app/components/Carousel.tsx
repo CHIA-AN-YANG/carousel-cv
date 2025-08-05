@@ -78,7 +78,7 @@ const Carousel: React.FC<PropType> = (props) => {
             <section className="embla__slide"
               key={slide.id}
               id={slide.content?.slideKey ?? ""}
-              style={{ "--slide-bg": slide.color } as React.CSSProperties}
+              style={{ "--slide-bg": 'transparent' } as React.CSSProperties}
             >
               <div className="embla__slide__number">
                 {slide.content?.slideKey ? slideMapper(slide.content.slideKey) : ""}

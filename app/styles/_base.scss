@@ -11,15 +11,15 @@
 }
 
 .theme-light {
-  --primary-desktop-c: oklch(0.52 0.12 317);
+  --primary-desktop-c: #8420ff;
   --primary-mobile-c: oklch(0.53 0.18 305); // primary color for mobile. Mobile needs more focus and higher contrast
   --secondary-c: oklch(0.69 0.12 318);
   --accent-c: oklch(0.95 0.16 108.76); // color for emphasis
   --blank-c: oklch(0.98 0 0); // color to leave breathing space
   --frame-c: oklch(0.96 0 0); // color for the frame and borders
-  --line-c: #000;
-  --text-body: oklch(0.32 0.02 303.14);
-  --text-high-contrast: oklch(0.19 0.01 305);
+  --line-c: #ffffff;
+  --text-body: #b9b5bf;
+  --text-high-contrast: #8420ff;
   --detail-high-contrast: oklch(0.75 0.01 305);
   --detail-medium-contrast: oklch(0.94 0 0);
   --detail-low-contrast: oklch(0.96 0 0);
@@ -33,12 +33,12 @@
 .theme-dark {
   --primary-desktop-c: #8ab4f8;
   --primary-mobile-c: #c1a8e2;
-  --secondary-c: #88babf;
+  --secondary-c: #33565a;
   --accent-c: #f9f871;
   --blank-c: #f9f9f9;
   --frame-c: #E7E7E7;
   --line-c: #FFF;
-  --text-body: #36313d;
+  --text-body: #616161;
   --text-high-contrast: rgb(195, 195, 195);
   --detail-high-contrast: rgb(101, 101, 101);
   --detail-medium-contrast: rgb(25, 25, 25);
