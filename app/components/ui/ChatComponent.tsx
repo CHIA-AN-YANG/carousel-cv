@@ -2,6 +2,7 @@ import { useState } from "react";
 import { boldPattern } from "../../util/regex";
 import axios from "axios";
 import Image from "next/image";
+import { sendGTMEvent } from '@next/third-parties/google';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 const ChatComponent: React.FC = () => {
@@ -13,10 +14,10 @@ const ChatComponent: React.FC = () => {
     if (!message.trim()) return;
     setResponses((prev) => [...prev, { user: "user", message }]);
     setLoading(true);
-
     try {
       const { data } = await axios.post(`${BACKEND_URL}/chat`, { message });
       setResponses((prev) => [...prev, { user: "ai", message: data.text }]);
+      sendGTMEvent({ event: 'click_send-chat', value: message });
       setMessage("");
     } catch (error) {
       console.error("Error fetching AI response:", error);

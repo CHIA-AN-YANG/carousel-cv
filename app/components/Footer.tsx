@@ -4,6 +4,7 @@ import links from "@/public/json/footer.json";
 import Image from "next/image";
 import BurgerIcon from './icons/Burger';
 import { useState } from 'react';
+import { sendGTMEvent } from '@next/third-parties/google';
 export interface FooterLink {
   url: string
   iconPath: string
@@ -30,7 +31,11 @@ const Footer: React.FC = () => {
       < footer className="footer" >
         {
           LINKS.map(({ url, iconPath, iconAlt, linkname }) => (
-            <a key={url} className="footer__link" href={url}>
+            <a key={url}
+              className="footer__link"
+              href={url}
+              onClick={() => sendGTMEvent({ event: 'click_personal-link', value: linkname })}
+            >
               <Image className="footer__link__svg"
                 src={"./images/footer" + iconPath}
                 alt={iconAlt || linkname}
