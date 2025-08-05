@@ -16,11 +16,28 @@ const Carousel: React.FC<PropType> = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(config);
   const hasNav = config?.name === 'main';
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick }: {
+    selectedIndex: number;
+    scrollSnaps: any[];
+    onDotButtonClick: (index: number) => void
+  } = useDotButton(emblaApi);
 
   const [activeRect, setActiveRect] = useState({ left: 0, width: 0 });
   const navRef = useRef<HTMLDivElement | null>(null);
+  // const path = usePathname();
+
+  // useEffect(() => {
+  //   if (typeof window === 'undefined') return;
+
+  //   const hash = window.location.hash;
+  //   if (hash) {
+  //     const id = hash.replace('#', '');
+  //     const el = document.getElementById(id);
+  //     if (el) {
+  //       el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+  //     }
+  //   }
+  // }, [path]);
 
   useEffect(() => {
     if (hasNav) onNavClick(selectedIndex);

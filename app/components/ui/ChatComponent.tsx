@@ -17,8 +17,8 @@ const ChatComponent: React.FC = () => {
     try {
       const { data } = await axios.post(`${BACKEND_URL}/chat`, { message });
       setResponses((prev) => [...prev, { user: "ai", message: data.text }]);
-      trackGtmEvent(GtmEventNames.FORM_SUBMIT, { 'sent_message': message });
-      trackGtmEvent(GtmEventNames.FORM_SUBMIT, { 'receive_message': data.text });
+      trackGtmEvent(GtmEventNames.CHAT, { 'sent_message': message });
+      trackGtmEvent(GtmEventNames.CHAT, { 'receive_message': data.text });
       setMessage("");
     } catch (error) {
       console.error("Error fetching AI response:", error);

@@ -38,7 +38,7 @@ $screen-xl: 1200px; // Extra Large Screens (Desktops, Monitors)
   &::-webkit-scrollbar-thumb {
     background-color: transparent;
     background-image: url("/images/scrollbar-long.png");
-    background-size: contain;
+    background-size: 30px 100%;
     background-repeat: no-repeat;
   }
 }

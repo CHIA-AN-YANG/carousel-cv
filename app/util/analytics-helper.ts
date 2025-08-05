@@ -2,8 +2,8 @@ import { sendGAEvent, sendGTMEvent } from '@next/third-parties/google';
 
 export const enum GtmEventNames {
   PAGE_VIEW = 'page_view',
-  CLICK = 'click',
-  FORM_SUBMIT = 'form_submit',
+  LOOK_FURTHER = 'look_further',
+  CHAT = 'chat',
   NAVIGATION = 'navigation',
 }
 export const trackGtmEvent = (eventName: GtmEventNames, customParams: { [x: string]: string }) => {
@@ -14,11 +14,10 @@ export const trackGtmEvent = (eventName: GtmEventNames, customParams: { [x: stri
       ...customParams,
     };
     sendGAEvent({
-      'event': `ga-${eventName}`,
+      'event': eventName,
       ...params
     });
-    sendGTMEvent({ 'event': eventName, params });
-    console.info(`*** GTM Event: ${eventName}`, JSON.stringify(params));
+    console.info(`*** GA Event: ${eventName}`, JSON.stringify(params));
   }
 };
 
