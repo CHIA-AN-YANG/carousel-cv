@@ -56,9 +56,6 @@ main::before {
     width: 100%;
     height: 100%;
     background-color: #27154D;
-    // filter: contrast(170%);
-    // background:
-    //   linear-gradient(to right top, #ce6ca38c, var(--secondary-c), rgba(0, 0, 0, 0)), var(--texture-bg), linear-gradient(to left, #8aa7ec, #5ffbf1, rgba(0, 0, 0, 0)), var(--texture-bg);
   }
 }
 
@@ -94,8 +91,8 @@ h3 {
   line-height: 2rem;
   font-size: 1.8rem;
   text-align: center;
-  color: var(--text-body);
-  background-color: var(--blank-c);
+  color: var(--text-high-contrast);
+  border: 2px solid var(--text-high-contrast);
 }
 
 .footer {
@@ -136,7 +133,7 @@ h3 {
     width: 100vw;
 
     &__link:hover {
-      filter: invert(1);
+      opacity: 0.9;
     }
   }
 
@@ -164,18 +161,16 @@ h3 {
     .wrapper {
       position: relative;
       background-color: var(--blank-c);
-      border-radius: 50%;
+      border-radius: 30px;
       display: flex;
       width: 60px;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       transition: all 0.5s ease-in-out;
-      transform: rotate(0deg);
       z-index: 100;
     }
 
     &__closed {
-      opacity: 0.6;
 
       .footer {
         width: 1px;
@@ -184,15 +179,17 @@ h3 {
     }
 
     &__open {
-      opacity: 1;
-
       .wrapper {
+        width: 350px;
+      }
+
+      .burger {
         transform: rotate(-20deg);
       }
 
       .footer {
-        width: calc(100vw - 55px);
-        opacity: 1;
+        width: 300px;
+        opacity: 0.75;
         pointer-events: all;
         touch-action: auto;
       }
@@ -201,7 +198,7 @@ h3 {
 
   .footer {
     right: 50px;
-    bottom: 1.2rem;
+    bottom: 1.6rem;
     overflow: hidden;
     justify-content: space-evenly;
     transition: all 0.5s ease-in-out;
@@ -217,6 +214,7 @@ h3 {
       &__svg {
         width: 32px;
         height: auto;
+        filter: invert(0);
       }
     }
   }

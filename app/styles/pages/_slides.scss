@@ -433,6 +433,7 @@ section#skills>div {
       color: transparent;
       overflow: visible;
       transition: all ease-in-out 0.5s;
+      cursor: pointer;
       -webkit-tap-highlight-color: transparent;
 
       @for $i from 0 through 4 {

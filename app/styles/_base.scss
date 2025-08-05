@@ -30,6 +30,20 @@
   --text-high-contrast-rgb-value: 49, 49, 49;
 }
 
+@include media-down($screen-sm) {
+  .theme-light {
+    --primary-desktop-c: #8420ff;
+    --primary-mobile-c: oklch(41.449% 0.09917 307.26); // primary color for mobile. Mobile needs more focus and higher contrast
+    --secondary-c: oklch(0.69 0.12 318);
+    --accent-c: oklch(0.95 0.16 108.76); // color for emphasis
+    --blank-c: oklch(0.98 0 0); // color to leave breathing space
+    --frame-c: oklch(0.96 0 0); // color for the frame and borders
+    --line-c: #343434;
+    --text-body: #343434;
+    --text-high-contrast: #232323;
+  }
+}
+
 .theme-dark {
   --primary-desktop-c: #8ab4f8;
   --primary-mobile-c: #c1a8e2;
