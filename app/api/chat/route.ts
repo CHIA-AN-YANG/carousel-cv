@@ -7,7 +7,7 @@ import path from 'path';
 
 dotenv.config();
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
 const GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
 const FILE_PATH = path.join(process.cwd(), "public", "txt/ai-cv.txt");
 const MODE = process.env.MODE;
