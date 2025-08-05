@@ -1,4 +1,4 @@
-import { sendGAEvent } from '@next/third-parties/google';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 export const enum GtmEventNames {
   PAGE_VIEW = 'page_view',
@@ -13,10 +13,11 @@ export const trackGtmEvent = (eventName: GtmEventNames, customParams: { [x: stri
       device: isMobile() ? 'mobile' : 'desktop',
       ...customParams,
     };
-    sendGAEvent('event', eventName, {
-      'event': eventName,
-      ...params
-    });
+    // sendGAEvent('event', eventName, {
+    //   'event': eventName,
+    //   ...params
+    // });
+    sendGTMEvent({ 'event': eventName, ...params });
   }
 };
 
