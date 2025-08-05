@@ -18,6 +18,7 @@ export const trackGtmEvent = (eventName: GtmEventNames, customParams: { [x: stri
     //   ...params
     // });
     sendGTMEvent({ 'event': eventName, ...params });
+    console.info(`*** GTM Event: ${eventName}`, params);
   }
 };
 

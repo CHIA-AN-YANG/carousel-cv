@@ -3,24 +3,24 @@
     "url":"https://www.linkedin.com/in/chia-an-yang-576199149/",
     "iconPath":"/linkedin.svg",
     "iconAlt":"linkedIn",
-    "linkname":"my profile"
+    "linkname":"LinkedIn profile"
   },
   { "id":2,
     "url":"https://medium.com/@chiaan.y.creativeworker",
     "iconPath":"/medium.svg",
     "iconAlt":"medium",
-    "linkname":"my articles"
+    "linkname":"Medium blog"
   },
   { "id":3,
     "url":"https://github.com/CHIA-AN-YANG/CHIA-AN-YANG",
     "iconPath":"/github.svg",
     "iconAlt":"GitHub",
-    "linkname":"Visit on GitHub"
+    "linkname":"My GitHub"
   },
   { "id":4,
     "url":"mailto:chiaan.y.creativeworker@gmail.com?subject=Just%20Saw%20Your%20Frontend%20Dev%20CV&body=Hi%20Anna,%0A%0A",
     "iconPath":"/email.svg",
     "iconAlt":"email",
-    "linkname":"e-mail me"
+    "linkname":"Drop a line"
   }
 ]

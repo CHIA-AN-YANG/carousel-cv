@@ -35,6 +35,7 @@ const Footer: React.FC = () => {
               <a key={url}
                 className="footer__link"
                 href={url}
+                target='_blank'
                 onClick={() => trackGtmEvent(GtmEventNames.CLICK, { link: linkname })}
               >
                 <Image className="footer__link__svg"
